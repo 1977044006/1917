@@ -68,7 +68,7 @@
                               float: left;
                               color: #424242;
                               line-height: 40px;
-                              display: inline-block; 
+                              // display: inline-block; 
                         }
                   }
                   .c_topbar_cen{
@@ -250,10 +250,10 @@
       position: absolute;
       top: 140px;
       left: 0;
+      z-index: 20;
       display: none;
+      background: #fff;
       .c_container3{
-            
-            z-index: 24;
             width: 1226px;
             margin:0 auto;
             height: 229px;
@@ -307,7 +307,7 @@
             height: 644px;
             margin-right: auto;
             margin-left: auto;
-            background: #b0b0b0;
+            background: #e0e0e0;
             .c_container_top{
                   margin: 0 auto;
                   position: relative;
@@ -315,7 +315,6 @@
                   list-style: none;
                   padding: 0;
                   z-index: 1;
-                  background: #e0e0e0;
                   width:1226px ;
                   height:460px ;
                   .c_nav_left{
@@ -328,7 +327,7 @@
                         width: 234px;
                         height: 420px;
                         font-size: 14px;
-                        background-color: #aaa;
+                        background: rgba(105,101,101,.6);
                         padding: 20px 0;
                         .c_nav_leftb{
                               width: 992px;
@@ -345,7 +344,7 @@
                               height: 420px;
                               border: 0;
                               color: #fff;
-                              background: rgba(105,101,101,.6);
+                              
                               li{
                                     height: 42px;
                                     line-height: 40px;
@@ -372,14 +371,66 @@
                   }
                   .c_nav_cen{
                         width: 992px;
-                      
                         height: 460px;
                         z-index: 10;
-                        
                         position: absolute;
+                        
                         left: 234px;
                         top:0px;
-                        
+                        div{
+                              width: 992px;
+                              height: 460px; 
+                              position: relative; 
+                              img{
+                                    overflow: hidden;
+                                    height: 460px; 
+                                    position: absolute;
+                                    right: 0;
+                              }
+                        }
+                        .c_em_left{     
+                              left: 0;
+                             
+                        }
+                        em{
+                              display: inline-block;
+                              position: absolute;
+                              cursor: pointer;
+                              font-size: 34px;
+                              width: 40px;
+                              height: 60px;
+                              text-align: center;
+                              line-height: 60px;
+                              color: #aaa;
+                              top: 45%;
+                        }
+                        .c_em_right:hover{
+                              background-color: #e0e0e0;
+                        }
+                        .c_em_left:hover{
+                              background-color: #e0e0e0;
+                        }
+                        .c_em_right{
+                              right: 0px;
+                              
+                              font-size: 40px;
+                        }
+                        ul{
+                              padding: 3px;
+                              position: absolute;
+                              bottom: 20px;
+                              right: 10px;
+                              li{
+                                    cursor: pointer;
+                                    float: left;
+                                    width: 15px;
+                                    height: 15px;
+                                    border-radius: 50%;
+                                    background-color: #f1eded;
+                                    margin-right: 8px;
+
+                              }
+                        }
                   }
             }
            
@@ -388,6 +439,42 @@
                   height: 170px;
                   background: yellow;
                   margin-top: 14px;
+                  .c_but_left{
+                        padding: 3px;
+                        list-style-type: none;
+                        font-size: 12px;
+                        text-align: center;
+                        background: #5f5750;
+                        width: 228px;
+                        height: 164px;
+                        ul{
+                              li{
+                                    position: relative;
+                                    float: left;
+                                    width: 70px;
+                                    height: 82px;
+                                    padding: 0 3px;
+                                    float: left;
+                                    
+                                    a{
+                                          display: block;
+                                          padding-top: 18px;
+                                          text-overflow: ellipsis;
+                                          color: whitesmoke;
+                                          opacity: .7;
+                                          -webkit-transition: opacity .2s;
+                                          transition: opacity .2s;
+                                          cursor: pointer;
+                                          i{
+                                                font-size: 25px;
+                                          }
+                                    }
+                                    a:hover{
+                                          color: white;
+                                    }
+                              }
+                        }
+                  }
             }
       }
 }
@@ -514,6 +601,33 @@
                                                 position: relative;
                                                 list-style: none;
                                                 float: left;
+                                                a{
+                                                      display: block;
+                                                      height: 261px;
+                                                      padding: 39px 0;
+                                                      position: relative;
+                                                      div{
+                                                            img{
+                                                                  width: 160px;
+                                                                  height: 166px;
+                                                            }
+                                                      }
+                                                      p{
+                                                            height: 39px;
+                                                            
+                                                            margin: 0 20px 12px;
+                                                            font-size: 16px;
+                                                            line-height: 69px;
+                                                            text-overflow: ellipsis;
+                                                            color:white;
+                                                            white-space: nowrap;
+                                                      }
+                                                      h4{
+                                                           height: 21px; 
+                                                           line-height: 21px;
+                                                            
+                                                      }
+                                                }
                                           }
                                     }
                                  
@@ -1049,6 +1163,7 @@
                         }
                   }
             }
+            
       }
 
 }

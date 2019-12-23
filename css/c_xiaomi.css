@@ -70,7 +70,6 @@
   float: left;
   color: #424242;
   line-height: 40px;
-  display: inline-block;
 }
 .c_header .c_site_topbar .c_container1 .c_topbar_cen {
   position: absolute;
@@ -239,10 +238,11 @@
   position: absolute;
   top: 140px;
   left: 0;
+  z-index: 20;
   display: none;
+  background: #fff;
 }
 .c_nav_menu .c_container3 {
-  z-index: 24;
   width: 1226px;
   margin: 0 auto;
   height: 229px;
@@ -286,7 +286,7 @@
   height: 644px;
   margin-right: auto;
   margin-left: auto;
-  background: #b0b0b0;
+  background: #e0e0e0;
 }
 .c_nav .c_container4 .c_container_top {
   margin: 0 auto;
@@ -295,7 +295,6 @@
   list-style: none;
   padding: 0;
   z-index: 1;
-  background: #e0e0e0;
   width: 1226px;
   height: 460px;
 }
@@ -306,7 +305,7 @@
   width: 234px;
   height: 420px;
   font-size: 14px;
-  background-color: #aaa;
+  background: rgba(105, 101, 101, 0.6);
   padding: 20px 0;
 }
 .c_nav .c_container4 .c_container_top .c_nav_left .c_nav_leftb {
@@ -321,7 +320,6 @@
   height: 420px;
   border: 0;
   color: #fff;
-  background: rgba(105, 101, 101, 0.6);
 }
 .c_nav .c_container4 .c_container_top .c_nav_left ul li {
   height: 42px;
@@ -350,11 +348,95 @@
   left: 234px;
   top: 0px;
 }
+.c_nav .c_container4 .c_container_top .c_nav_cen div {
+  width: 992px;
+  height: 460px;
+  position: relative;
+}
+.c_nav .c_container4 .c_container_top .c_nav_cen div img {
+  overflow: hidden;
+  height: 460px;
+  position: absolute;
+  right: 0;
+}
+.c_nav .c_container4 .c_container_top .c_nav_cen .c_em_left {
+  left: 0;
+}
+.c_nav .c_container4 .c_container_top .c_nav_cen em {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  font-size: 34px;
+  width: 40px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #aaa;
+  top: 45%;
+}
+.c_nav .c_container4 .c_container_top .c_nav_cen .c_em_right:hover {
+  background-color: #e0e0e0;
+}
+.c_nav .c_container4 .c_container_top .c_nav_cen .c_em_left:hover {
+  background-color: #e0e0e0;
+}
+.c_nav .c_container4 .c_container_top .c_nav_cen .c_em_right {
+  right: 0px;
+  font-size: 40px;
+}
+.c_nav .c_container4 .c_container_top .c_nav_cen ul {
+  padding: 3px;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+.c_nav .c_container4 .c_container_top .c_nav_cen ul li {
+  cursor: pointer;
+  float: left;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f1eded;
+  margin-right: 8px;
+}
 .c_nav .c_container4 .c_nav_but {
   width: 1226px;
   height: 170px;
   background: yellow;
   margin-top: 14px;
+}
+.c_nav .c_container4 .c_nav_but .c_but_left {
+  padding: 3px;
+  list-style-type: none;
+  font-size: 12px;
+  text-align: center;
+  background: #5f5750;
+  width: 228px;
+  height: 164px;
+}
+.c_nav .c_container4 .c_nav_but .c_but_left ul li {
+  position: relative;
+  float: left;
+  width: 70px;
+  height: 82px;
+  padding: 0 3px;
+  float: left;
+}
+.c_nav .c_container4 .c_nav_but .c_but_left ul li a {
+  display: block;
+  padding-top: 18px;
+  text-overflow: ellipsis;
+  color: whitesmoke;
+  opacity: .7;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+.c_nav .c_container4 .c_nav_but .c_but_left ul li a i {
+  font-size: 25px;
+}
+.c_nav .c_container4 .c_nav_but .c_but_left ul li a:hover {
+  color: white;
 }
 
 .c_main_page {
@@ -480,6 +562,29 @@
   position: relative;
   list-style: none;
   float: left;
+}
+.c_main_page .container5 .c_main1 .c_box_bd1 .c_row1 .c_row1_right ul li a {
+  display: block;
+  height: 261px;
+  padding: 39px 0;
+  position: relative;
+}
+.c_main_page .container5 .c_main1 .c_box_bd1 .c_row1 .c_row1_right ul li a div img {
+  width: 160px;
+  height: 166px;
+}
+.c_main_page .container5 .c_main1 .c_box_bd1 .c_row1 .c_row1_right ul li a p {
+  height: 39px;
+  margin: 0 20px 12px;
+  font-size: 16px;
+  line-height: 69px;
+  text-overflow: ellipsis;
+  color: white;
+  white-space: nowrap;
+}
+.c_main_page .container5 .c_main1 .c_box_bd1 .c_row1 .c_row1_right ul li a h4 {
+  height: 21px;
+  line-height: 21px;
 }
 .c_main_page .container5 .c_main2 {
   width: 1226px;
