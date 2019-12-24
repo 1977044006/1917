@@ -175,6 +175,62 @@
                               list-style-type: none;
                               font-size: 16px;
                               line-height: 0px;
+                              .c_nav_menu{
+                                    width: 1226px;
+                                    height: 230px;
+                                    position: absolute;
+                                    top: 100px;
+                                    left: -62px;
+                                    z-index: 20;
+                                    display: block;
+                                    background: #fff;
+                                    .c_container3{
+                                          width: 1226px;
+                                          margin:0 auto;
+                                          height: 229px;
+                                          border-top: 1px solid #e0e0e0;
+
+                                          ul{
+                                                padding: 0;
+                                                width: 1226px;
+                                                height: 230px;
+                                                li{
+                                                      float: left;
+                                                      position: relative;
+                                                      width: 200px;
+                                                      text-align: center;
+                                                      
+                                                      a{
+                              
+                                                            .c_container3_img{
+                                                                  // width: 200px;
+                                                                  height: 110px;
+                                                                  margin: 0 auto 16px;
+                                                                  text-align: center;
+                                                                  
+                                                            }
+                              
+                                                            div{
+                                                                  .c_title{
+                                                                        margin: 0;
+                                                                        line-height: 20px;
+                                                                        color: #333;
+                                                                        font-size: 14px;
+                                                                  }
+                                                                  p{
+                                                                        margin: 0;
+                                                                        line-height: 20px;
+                                                                        color: #ff6700;
+                                                                        font-size: 14px;
+                                                                  }
+                                                            }
+                                                      }
+                                                }
+                                          }
+                                          
+                                    }
+                              } 
+                              
                               
                               li{
                                     float: left;
@@ -244,57 +300,7 @@
 //  header
 } 
 
-.c_nav_menu{
-      width: 100%;
-      height: 229px;
-      position: absolute;
-      top: 140px;
-      left: 0;
-      z-index: 20;
-      display: none;
-      background: #fff;
-      .c_container3{
-            width: 1226px;
-            margin:0 auto;
-            height: 229px;
-            border-top: 1px solid #e0e0e0;
-            
-            ul{
-                  li{
-                        float: left;
-                        position: relative;
-                        width: 180px;
-                        padding: 35px 12px 0;
-                        text-align: center;
-                        a{
 
-                              .c_container3_img{
-                                    width: 160px;
-                                    height: 110px;
-                                    margin: 0 auto 16px;
-                                    text-align: center;
-                              }
-
-                              div{
-                                    .c_title{
-                                          margin: 0;
-                                          line-height: 20px;
-                                          color: #333;
-                                          font-size: 14px;
-                                    }
-                                    p{
-                                          margin: 0;
-                                          line-height: 20px;
-                                          color: #ff6700;
-                                          font-size: 14px;
-                                    }
-                              }
-                        }
-                  }
-            }
-            
-      }
-} 
 
 .c_nav{
       width:100% ;

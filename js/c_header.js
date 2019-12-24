@@ -14,23 +14,30 @@ function loadData(){
             dataType: 'json',
             cache: false,
             success: function (jsonArr){
-                  //  console.log(jsonArr.json2);
+                  // console.log(jsonArr.json2);
                   
                   // var results = '';
                   // $.each(jsonArr,function (index,item){
                   //       results += `<div class="goods" code="${item.code}"><img src="${item.imgurl}" alt=""><p>${item.price}</p><h3>${item.title}</h3><div>加入购物车</div></div>`;
                   // });
                   // $('.goodsList').html(results);
-
+                  
+                  
                   // function c_fn4() {
-                  //       var c_arr2=jsonArr.json2;
-                  //       var c_results1 = '';
-                  //       $.each(c_arr2,function(index,item){
-                  //             c_results1+=`<img src="${c_arr2.item}" alt="">`
-                  //       })
-                  //       $('.c_nav_cen div').html(c_results1);
+                        var c_arr2=jsonArr.json2;
+                        var c_results1 = '';
+                        console.log(c_arr2[0].imgurl);
+                        
+                        // $.each(c_arr2,function(index,item){
+                        //       console.log(c_arr2.item);
+                    c_results1+=`<img src="${c_arr2[0].imgurl}" alt="">`
+                        // });
+                        // $('.c_nav_cen div').html(c_results1);
+                        console.log(c_results1);
+                        
                   // }
                   // c_fn4();
+
 
             }
       });
@@ -70,18 +77,9 @@ function c_fn3(){
 
       })
       
-      $('.c_nav_menu').mouseenter(function(){
-            $('.c_nav_menu').css('dispaly','block');
-      })
-      $('.c_nav_menu').mouseover(function(){
-            $('.c_nav_menu').css('dispaly','block');
-      })
-      $('.c_nav_menu').mouseleave(function(){
+      $('.c_header_nav').on('mouseleave','ul',function(){
             $('.c_nav_menu').slideUp( 200 , 'swing' , function (){ } );
       })
-      // $('.c_header_nav').on('mouseleave','ul',function(){
-      //       $('.c_nav_menu').slideUp( 200 , 'swing' , function (){ } );
-      // })
 }
 c_fn3();
 
