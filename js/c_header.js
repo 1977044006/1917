@@ -22,6 +22,7 @@ function loadData(){
                   // });
                   // $('.goodsList').html(results);
                   
+                  //tou bu 切换
                   function c_fn6(){
                         var c_arr1=jsonArr.json1;
                         var c_results1=''
@@ -32,7 +33,7 @@ function loadData(){
                                     <div>
                                           <div class="c_title">${item.title}</div>
                                           <p>
-                                                ${item.price元}
+                                                ${item.price}元起
                                           </p>
                                     </div>
                               </a>
@@ -57,18 +58,18 @@ function loadData(){
                         var c_timer1;
                         var index=0;
                         $('.c_nav_cen div img').eq(index).css('z-index',3);
-                        $('.ulin li').eq(index).css('backgroundColor','greenyellow');
+                        $('.c_nav_cen ul li ').eq(index).css('backgroundColor','greenyellow');
                         function fn(){
                               clearInterval(c_timer1);
                               c_timer1=setInterval(function(){
                                     $('.c_nav_cen div img').css('z-index',0);
-                                    $('.ulin li').css('backgroundColor','');
+                                    $('.c_nav_cen ul li').css('backgroundColor','');
                                     index++;
                                     if(index>=$('.c_nav_cen div img').length){
                                           index=0;
                                     }
                                     $('.c_nav_cen div img').eq(index).css('z-index',3);
-                                    $('.ulin li').eq(index).css('backgroundColor','greenyellow');
+                                    $('.c_nav_cen ul li').eq(index).css('backgroundColor','greenyellow');
                               },2000)
                         }
                         fn();
@@ -130,7 +131,328 @@ function loadData(){
                         $('.c_row1_right ul').html(c_results3);  
                   }
                   c_fn5();
+                  
+                  function c_fn7(){
+                        var c_arr7=jsonArr.json7;
+                        var c_results7='';
+                        $.each(c_arr7,function(index,item){
+                              c_results7+=`<li><a href=""><img src="${item.imgurl}" alt=""></a></li>`
+                        })
+                        $('.c_but_right ul').html(c_results7)
+                  }
+                  c_fn7();
 
+                  //da lunbotu zuo
+                  function c_fn8(){
+                        $('.c_nav_left').mouseenter(function(){
+                              $('.c_nav_leftb').css('display','block');
+                        })
+                        $('.c_nav_left').mouseleave(function(){
+                              $('.c_nav_leftb').css('display','none');
+                        })
+                        
+                        $('.c_nav_lefta ul').on('mouseenter','li',function(){
+                              if($(this).index()==0||$(this).index()==3){
+                                    var c_arr8=jsonArr.json8;
+                                    var c_results8='';
+                                    $.each(c_arr8,function(index,item){
+                                          c_results8+=`<li>
+                                          <a href="">
+                                                <img src="${item.imgurl}" alt="">
+                                                <span>${item.title}</span>
+                                          </a>
+                                    </li>`;
+                                    })
+                                    $('.c_nav_leftb ul').html='';
+                                    $('.c_nav_leftb ul').html(c_results8);
+                              }
+                              if($(this).index()==1||$(this).index()==4){
+                                    var c_arr9=jsonArr.json9;
+                                    var c_results9='';
+                                    $.each(c_arr9,function(index,item){
+                                          c_results9+=`<li>
+                                          <a href="">
+                                                <img src="${item.imgurl}" alt="">
+                                                <span>${item.title}</span>
+                                          </a>
+                                    </li>`;
+                                    })
+                                    $('.c_nav_leftb ul').html='';
+                                    $('.c_nav_leftb ul').html(c_results9);
+                              }
+                              if($(this).index()==2||$(this).index()==5){
+                                    var c_arr10=jsonArr.json10;
+                                    var c_results10='';
+                                    $.each(c_arr10,function(index,item){
+                                          c_results10+=`<li>
+                                          <a href="">
+                                                <img src="${item.imgurl}" alt="">
+                                                <span>${item.title}</span>
+                                          </a>
+                                    </li>`;
+                                    })
+                                    $('.c_nav_leftb ul').html='';
+                                    $('.c_nav_leftb ul').html(c_results10);
+                              }
+                        
+                              
+                        })
+                        
+                        
+                  }
+                  c_fn8();
+
+                  //shou ji 查看全部
+                  function c_fn11(){
+                        var c_arr11=jsonArr.json11;
+                        var c_results11=''
+                              $.each(c_arr11,function(index,item){
+                             c_results11+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                           
+                        });
+                        $('.c_box_right .c_box_right_ul').html(c_results11);  
+                  }
+                  c_fn11();
+                  
+                  //热门 电视影音
+                  function c_fn12(){
+                        var c_arr12=jsonArr.json12;
+                        var c_results12='';
+                              $.each(c_arr12,function(index,item){
+                             c_results12+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_box_right .c_ul_b').html='';  
+                        $('.c_box_right .c_ul_b').html(c_results12);
+                        $('.c_controls3_dianshi a').css({
+                                    'border-bottom':'',
+                                    'color': '',
+                        });
+                        $('.c_controls3_remne a').css({
+                              'border-bottom':'2px solid #ff6700',
+                              'color': '#ff6700',
+                        });
+                        
+                  }
+                  c_fn12();
+
+                  function c_fn13(){
+                        var c_arr13=jsonArr.json13;
+                        var c_results13='';
+                              $.each(c_arr13,function(index,item){
+                             c_results13+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_box_right .c_ul_b').html='';  
+                        $('.c_box_right .c_ul_b').html(c_results13);
+                        $('.c_controls3_remne a').css({
+                              'border-bottom':'',
+                              'color': '',
+                        });
+                        $('.c_controls3_dianshi a').css({
+                              'border-bottom':'2px solid #ff6700',
+                              'color': '#ff6700',
+                        });
+                  }
+                  
+                  $('.c_controls3_remne').mouseenter(function(){
+                        c_fn12();
+                  });
+                  $('.c_controls3_dianshi').mouseenter(function(){
+                        c_fn13();
+                  })
+
+
+                  //热门 安防 出行
+                  function c_fn14(){
+                        var c_arr14=jsonArr.json14;
+                        var c_results14='';
+                              $.each(c_arr14,function(index,item){
+                             c_results14+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul_4').html='';  
+                        $('.c_ul_4').html(c_results14);
+                  }
+                  c_fn14();
+
+                  function c_fn15(){
+                        var c_arr15=jsonArr.json12;
+                        var c_results15='';
+                              $.each(c_arr15,function(index,item){
+                             c_results15+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul_4').html='';  
+                        $('.c_ul_4').html(c_results15);
+                  }
+                  function c_fn16(){
+                        var c_arr16=jsonArr.json13;
+                        var c_results16='';
+                              $.each(c_arr16,function(index,item){
+                             c_results16+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul_4').html='';  
+                        $('.c_ul_4').html(c_results16);
+                  }
+                  $('.c_controls4_a').mouseenter(function(){
+                        c_fn14();
+                  });
+
+                  $('.c_controls4_b').mouseenter(function(){
+                        c_fn16();
+                  })
+                  $('.c_controls4_c').mouseenter(function(){
+                        c_fn15();
+                  })
+                  
+                  //热门 耳机音箱
+                  function c_fn17(){
+                        var c_arr17=jsonArr.json12;
+                        var c_results17='';
+                              $.each(c_arr17,function(index,item){
+                             c_results17+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul5').html='';  
+                        $('.c_ul5').html(c_results17);
+                        $('.c_controls5_b a').css({
+                                    'border-bottom':'',
+                                    'color': '',
+                        });
+                        $('.c_controls5_a a').css({
+                              'border-bottom':'2px solid #ff6700',
+                              'color': '#ff6700',
+                        });
+                        
+                  }
+                  c_fn17();
+
+                  function c_fn18(){
+                        var c_arr18=jsonArr.json13;
+                        var c_results18='';
+                              $.each(c_arr18,function(index,item){
+                             c_results18+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul5').html='';  
+                        $('.c_ul5').html(c_results18);
+                        $('.c_controls5_a a').css({
+                              'border-bottom':'',
+                              'color': '',
+                        });
+                        $('.c_controls5_b a').css({
+                              'border-bottom':'2px solid #ff6700',
+                              'color': '#ff6700',
+                        });
+                  }
+                  $('.c_controls5_a').mouseenter(function(){
+                        c_fn17();
+                  });
+                  $('.c_controls5_b').mouseenter(function(){
+                        c_fn18();
+                  })
+                  
+                  //热门 保护套 充电器
+                  function c_fn19(){
+                        var c_arr19=jsonArr.json14;
+                        var c_results19='';
+                              $.each(c_arr19,function(index,item){
+                             c_results19+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul6').html='';  
+                        $('.c_ul6').html(c_results19);
+                  }
+                  c_fn19();
+
+                  function c_fn20(){
+                        var c_arr20=jsonArr.json12;
+                        var c_results20='';
+                              $.each(c_arr20,function(index,item){
+                             c_results20+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul6').html='';  
+                        $('.c_ul6').html(c_results20);
+                  }
+                  function c_fn21(){
+                        var c_arr21=jsonArr.json13;
+                        var c_results21='';
+                              $.each(c_arr21,function(index,item){
+                             c_results21+=`<li>
+                             <a href="">
+                                   <div><img src="${item.imgurl}" alt=""></div>
+                                   <p>${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul6').html='';  
+                        $('.c_ul6').html(c_results21);
+                  }
+                  $('.c_controls6_a').mouseenter(function(){
+                        c_fn19();
+                  });
+
+                  $('.c_controls6_b').mouseenter(function(){
+                        c_fn20();
+                  })
+                  $('.c_controls6_c').mouseenter(function(){
+                        c_fn21();
+                  })
             }
       });
       
@@ -170,5 +492,6 @@ function c_fn3(){
       })
 }
 c_fn3();
+
 
 
