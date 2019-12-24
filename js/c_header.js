@@ -22,30 +22,120 @@ function loadData(){
                   // });
                   // $('.goodsList').html(results);
                   
-                  
-                  // function c_fn4() {
-                        var c_arr2=jsonArr.json2;
-                        var c_results1 = '';
-                        console.log(c_arr2[0].imgurl);
-                        
-                        // $.each(c_arr2,function(index,item){
-                        //       console.log(c_arr2.item);
-                    c_results1+=`<img src="${c_arr2[0].imgurl}" alt="">`
-                        // });
-                        // $('.c_nav_cen div').html(c_results1);
-                        console.log(c_results1);
-                        
-                  // }
-                  // c_fn4();
+                  function c_fn6(){
+                        var c_arr1=jsonArr.json1;
+                        var c_results1=''
+                              $.each(c_arr1,function(index,item){
+                             c_results1+=`<li>
+                              <a href="">
+                                    <div class="c_container3_img"><img src="${item.imgurl}" alt=""></div>
+                                    <div>
+                                          <div class="c_title">${item.title}</div>
+                                          <p>
+                                                ${item.price元}
+                                          </p>
+                                    </div>
+                              </a>
+                        </li>`
+                        });
+                        $('.c_nav_menu .c_container3 ul').html(c_results1);  
+                  }
+                  c_fn6();
 
+                  function c_fn4() {//dalunbotu
+                        var c_arr2=jsonArr.json2;
+                        var c_results2 = '';
+                        $.each(c_arr2,function(index,item){
+                              c_results2+=`<img src="${item.imgurl}" alt="">`
+                        });
+                        $('.c_nav_cen div').html(c_results2);  
+
+                  }
+                  c_fn4();
+
+                  function c_fn4a(){//自动轮播
+                        var c_timer1;
+                        var index=0;
+                        $('.c_nav_cen div img').eq(index).css('z-index',3);
+                        $('.ulin li').eq(index).css('backgroundColor','greenyellow');
+                        function fn(){
+                              clearInterval(c_timer1);
+                              c_timer1=setInterval(function(){
+                                    $('.c_nav_cen div img').css('z-index',0);
+                                    $('.ulin li').css('backgroundColor','');
+                                    index++;
+                                    if(index>=$('.c_nav_cen div img').length){
+                                          index=0;
+                                    }
+                                    $('.c_nav_cen div img').eq(index).css('z-index',3);
+                                    $('.ulin li').eq(index).css('backgroundColor','greenyellow');
+                              },2000)
+                        }
+                        fn();
+
+                        $('.c_nav_cen ul li').click(function(){
+                              clearInterval(c_timer1);
+                              index=$(this).index();
+                              $('.c_nav_cen div img').css('z-index',1);
+                              $('.c_nav_cen div img').eq(index).css('z-index',3);
+                              $('.c_nav_cen ul li').css('backgroundColor','');
+                              $(this).css('backgroundColor','greenyellow');
+                              index=$(this).index();
+                              fn();
+                        })
+
+                        $('.c_em_left').click(function(){
+                              clearInterval(c_timer1);
+                              index=index-1;
+                              if(index<0){
+                                    index=4;
+                              }
+                        fn1();
+                        })
+                        $('.c_em_right').click(function(){
+                              clearInterval(c_timer1);
+                              index=index+1;
+                              if(index>4){
+                                    index=0;
+                              }
+                        fn1();
+                        })
+
+                        function fn1(){
+                              $('.c_nav_cen div img').css('z-index',1);
+                              $('.c_nav_cen div img').eq(index).css('z-index',3);
+                              $('.c_nav_cen ul li').css('backgroundColor','');
+                              $('.c_nav_cen ul li').eq(index).css('backgroundColor','greenyellow');
+                              fn();
+                        }
+                  }
+
+                  c_fn4a();
+
+                  function c_fn5(){
+                        var c_arr3=jsonArr.json3;
+                        var c_results3 = '';
+                        $.each(c_arr3,function(index,item){
+                              // console.log(item.imgurl);
+                              c_results3+=`<li>
+                              <a href="">
+                                    <div>
+                                          <img src="${item.imgurl}" alt="">
+                                    </div>
+                                    <p>${item.title}</p>
+                                    <h4>${item.price}元</h4>
+                              </a>
+                        </li>`
+                        });
+                        $('.c_row1_right ul').html(c_results3);  
+                  }
+                  c_fn5();
 
             }
       });
       
 }
 loadData();
-
-
 
 
 function c_fn2(){
@@ -72,12 +162,10 @@ function c_fn1(){
 c_fn1();
 
 function c_fn3(){
-      $('.c_header_nav ul').on('mouseenter','li',function(){
+      $('.c_header_nav').mouseenter(function(){
             $('.c_nav_menu').slideDown( 500 , 'swing' , function (){ } );
-
       })
-      
-      $('.c_header_nav').on('mouseleave','ul',function(){
+      $('.c_header_nav').on('mouseleave','.c_ula',function(){
             $('.c_nav_menu').slideUp( 200 , 'swing' , function (){ } );
       })
 }

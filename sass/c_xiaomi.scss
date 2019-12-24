@@ -168,7 +168,7 @@
                               position: relative;
                               z-index: 10; 
                               float: left;
-                              width: 1100px;
+                              width: 850px;
                               height: 88px;
                               margin: 0;
                               padding: 12px 0 0 30px;
@@ -182,7 +182,7 @@
                                     top: 100px;
                                     left: -62px;
                                     z-index: 20;
-                                    display: block;
+                                    display: none;
                                     background: #fff;
                                     .c_container3{
                                           width: 1226px;
@@ -201,7 +201,7 @@
                                                       text-align: center;
                                                       
                                                       a{
-                              
+                                                            text-decoration: none;
                                                             .c_container3_img{
                                                                   // width: 200px;
                                                                   height: 110px;
@@ -340,7 +340,8 @@
                               // background: whitesmoke;
                               height: 460px;
                               // z-index: 5;
-                              display: none;
+                              display:none;
+                              background: white;
                               position: absolute;
                               left: 234px;
                               top:0px;
@@ -380,7 +381,6 @@
                         height: 460px;
                         z-index: 10;
                         position: absolute;
-                        
                         left: 234px;
                         top:0px;
                         div{
@@ -409,6 +409,7 @@
                               line-height: 60px;
                               color: #aaa;
                               top: 45%;
+                              z-index: 50;
                         }
                         .c_em_right:hover{
                               background-color: #e0e0e0;
@@ -426,6 +427,7 @@
                               position: absolute;
                               bottom: 20px;
                               right: 10px;
+                              z-index: 50;
                               li{
                                     cursor: pointer;
                                     float: left;
@@ -434,7 +436,7 @@
                                     border-radius: 50%;
                                     background-color: #f1eded;
                                     margin-right: 8px;
-
+                                    
                               }
                         }
                   }
@@ -595,6 +597,8 @@
                                     background: white;
                                     height: 340px;
                                     ul{
+                                          height: 340px;
+                                          overflow: hidden;
                                           li{
                                                 width: 234px;
                                                 height: 339px;
@@ -612,6 +616,7 @@
                                                       height: 261px;
                                                       padding: 39px 0;
                                                       position: relative;
+                                                      text-decoration: none;
                                                       div{
                                                             img{
                                                                   width: 160px;
