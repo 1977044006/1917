@@ -1,0 +1,269 @@
+.x-wrap{
+    .x-header{
+        width:100%;
+        height: 56px;
+        background: #333;
+        // position: fixed;
+        left: 0;
+        top: 0;
+        .x-main{
+            width: 1263px;
+            margin: 0 auto;
+            .x-header-left{
+                float: left;
+                width: 170px;
+                height:56px;
+                cursor: pointer;
+                a{
+                    display: block;
+                    float: left;
+                    margin-right: 11px;
+                    img{
+                        width: 34px;
+                        height: 32px;
+                        padding-top:10px;
+                    }
+                }
+                .x-p{
+                    color: #fff;
+                    line-height: 56px;
+                    font-size: 20px;
+                }
+            }
+            .x-header-center{
+                margin-left: 30px;
+                height: 56px;
+                float: left;
+                margin-right: 120px;
+                .x-lis{
+                    float: left;
+                    position: relative;
+                    a{
+                        list-style: none;
+                        padding: 0 7px;
+                        color:#fff;
+                        font-size:14px;
+                        float:left;
+                        line-height: 56px;
+                        cursor: pointer;
+                        display: block;
+                    }
+                    a:hover{
+                        color: blue;
+                        background: #000;
+                    }
+                    .x-active{
+                        position: absolute;
+                        top: 56px;
+                        background: #000;
+                        display: none;
+                        z-index: 999;
+                        p{
+                            color: #fff;
+                            font-size: 14px;
+                            text-align: center;
+                            padding: 0 7px;
+                            line-height: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                    .x-talk{
+                        position: absolute;
+                        top: 56px;
+                        background: #333;
+                        width: 225px;
+                        z-index: 999;
+                        height: 200px;
+                        display: none;
+                        .x-plan{
+                            .x-left{
+                                float:left;
+                                // display: inline-block;
+                                border-bottom: 1px solid #666;
+                                span{
+                                    color: #fff;
+                                    font-size: 14px;
+                                }
+                                .solve{
+                                    padding:0 7px;
+                                    line-height: 50px;
+                                    color: #666;
+                                }
+                                .all{
+                                    margin-left: 50px;
+                                }
+
+                            }
+                            .develope{
+                                width: 71px;
+                                float: left;
+                                font-size: 14px;
+                                color: #666;;
+                                line-height: 50px;
+                                text-align: center;
+                                span{
+                                    display: inline-block;
+                                    line-height: 50px;
+                                    border-bottom: 1px solid #666;
+                                }
+                            }
+                        }
+                        .x-intellect{
+                            color: #fff;
+                            font-size: 14px;
+                            .x-intellect-left{
+                                float: left;
+                                width: 150px;
+                                span{
+                                    line-height: 50px;
+                                    padding:0 7px;
+                                }
+                            }
+                            .x-intellect-right{
+                                float: left;
+                                line-height: 50px;
+                                width: 71px;
+                                text-align: center;
+                                div{
+                                    span{
+                                        display: inline-block;
+                                        line-height:50px;
+                                    }
+                                }
+                            }
+                        }
+                        p{
+                        color: #fff;
+                        font-size: 14px;
+                        text-align: center;
+                        padding: 0 7px;
+                        line-height: 50px;
+                        float: left;
+                        }
+                    }
+                }
+            }
+        }
+            .x-console{
+                float: left;
+                cursor: pointer;
+                p{
+                    color: #fff;
+                    line-height: 56px;
+                    width: 96px;
+                    text-align: center;
+                    font-size: 14px;
+                }
+                p:hover{
+                    color: blue;
+                }
+                .x-console-serve{
+                    background: #000;
+                    display: none;
+                    position: relative;
+                    z-index: 999;
+                    span{
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #fff;
+                        line-height: 50px;
+                    }
+                }
+            }
+            .x-login{
+                float: left;
+                margin: 12px 0 0 100px;
+                .x-btn{
+                    height: 30px;
+                    width: 80px;
+                    border: none;
+                    border: 1px solid #fff;
+                    border-radius: 20px;
+                    background: #333;
+                    span{
+                        color: #fff;
+                        text-align: center;
+                    }
+                }
+                .x-btn:hover{
+                    background: blue;
+                }
+            }
+        }
+    .x-banner{
+        height: 360px;
+        max-width: 100%;
+        min-width: 1200px;
+        background: url(../img/xx-pic1.png) no-repeat center;
+        background-size: cover;
+        position: relative;
+    }
+    .x-banner-content{
+        width: 378px;
+        height: 214px;
+        position: absolute;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        h5{
+            font-size: 24px;
+            color: #fff;
+            text-align-last: justify;
+        }
+        h2{
+            font-size: 48px;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 6px;
+        }
+        .x-bc-btn{
+            height: 56px;
+            width: 260px;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid #628dff;
+            box-shadow: 0 0 8px 3px #3638e0;
+            margin: 50px 0 0 60px;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+            span{
+                color: #fff;
+                font-size: 20px;
+            } 
+        }
+    }
+    .x-main{
+        .x-content{
+            .x-brief{
+                .x-briefnav{
+                    position: relative;
+                    left: 50%;
+                    transform: translate(-50%,0);
+                    width: 402px;
+                    margin-top: 20px;
+                    a{
+                        color: #333;
+                        cursor: pointer;
+                        span{
+                            width: 24%;
+                            display: inline-block;
+                            padding: 5px 0 5px 0;
+                            text-align: center;
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                        .x-briefnav-active{
+                            border-bottom: 2px solid #1890ff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
