@@ -26,6 +26,7 @@
                               font-size: 12px;
                               color: #b0b0b0;
                               cursor: pointer;
+                              text-decoration: none;
                         }
                         .c_app1{
                               position: relative;
@@ -650,16 +651,19 @@
                                     float: right;
                                     background: white;
                                     height: 340px;
+                                    overflow: hidden;
+                                    // overflow-x: scroll;
                                     ul{
                                           height: 340px;
-                                          overflow: hidden;
+                                          width: 5000px;
+                                         
                                           li{
                                                 width: 234px;
                                                 height: 339px;
                                                 margin-left: 14px;
                                                 border-top: 1px solid greenyellow;
                                                 text-align: center;
-                                                background:#aaa;
+                                                
                                                 -webkit-transition: all .6s;
                                                 transition: all .6s;
                                                 position: relative;
@@ -684,7 +688,7 @@
                                                             font-size: 16px;
                                                             line-height: 69px;
                                                             text-overflow: ellipsis;
-                                                            color:white;
+                                                            color:#ff6700;
                                                             white-space: nowrap;
                                                       }
                                                       h4{

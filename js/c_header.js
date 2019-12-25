@@ -113,6 +113,7 @@ function loadData(){
 
                   c_fn4a();
 
+                  //小米闪购 轮播图
                   function c_fn5(){
                         var c_arr3=jsonArr.json3;
                         var c_results3 = '';
@@ -129,9 +130,46 @@ function loadData(){
                         </li>`
                         });
                         $('.c_row1_right ul').html(c_results3);  
+
+                        
+                        // var warp=document.querySelector('.warp');
+                        // var inner=document.querySelector('.inner');
+                        // con2.innerHTML=con1.innerHTML;
+                        // var max = con1.clientWidth;
+                        var img1w =($('.c_row1_right ul li').width() + 14)*4;
+                        var c_row1_right=document.querySelector('.c_row1_right');
+                        // console.log(img1w);
+                        var timer;
+                        var x=0;
+                        function move(){
+                              timer = setInterval(function (){
+                                    x+=2;
+                                    if(x%img1w==0){
+                                         clearInterval(timer);
+                                         setTimeout(function(){
+                                               move();
+                                         },3000)
+                                    }
+                                    if (x>=img1w*2) {
+                                          x = 0;
+                                          c_row1_right.scrollLeft=0;
+                                    }
+                                    else{
+                                          c_row1_right.scrollLeft=x;
+                                          // console.log(c_row1_right.scrollLeft);
+                                    }
+                              },1);
+                        }
+                        move();
+
                   }
                   c_fn5();
+                 
                   
+               
+
+
+
                   function c_fn7(){
                         var c_arr7=jsonArr.json7;
                         var c_results7='';
@@ -412,7 +450,6 @@ function loadData(){
                         $('.c_ul6').html(c_results19);
                   }
                   c_fn19();
-
                   function c_fn20(){
                         var c_arr20=jsonArr.json12;
                         var c_results20='';
@@ -446,7 +483,6 @@ function loadData(){
                   $('.c_controls6_a').mouseenter(function(){
                         c_fn19();
                   });
-
                   $('.c_controls6_b').mouseenter(function(){
                         c_fn20();
                   })
