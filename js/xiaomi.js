@@ -21,4 +21,8 @@ $('.x-console').bind({
         $('.x-console-serve').css('display','none')
      }
 })
+$('.x-threebtn div').click(function(){
+    $(this).addClass('x-activing').siblings('div').removeClass('x-activing');
+})
+
 
