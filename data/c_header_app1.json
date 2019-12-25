@@ -100,6 +100,25 @@
 		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu4.png","price":"1299"},
 		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu5.jpg","price":"1299"},
 		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu6.webp","price":"1299"}
-	]
+	],
 
+	"json15":[
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian1.webp","price":"1299"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_tian2.jpg","price":"1199"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian3.webp","price":"1299"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian4.png","price":"1299"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian5.jpg","price":"1299"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian6.jpg","price":"1299"}
+	],
+
+	"json16":[
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu1.jpg","price":"199","code":"abc1"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu2.jpg","price":"1299","code":"abc2"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu3.jpg","price":"699","code":"abc3"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu4.png","price":"1599","code":"abc4"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu5.jpg","price":"1099","code":"abc5"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu6.webp","price":"2399","code":"abc6"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu3.jpg","price":"1799","code":"abc7"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu5.jpg","price":"1399","code":"abc8"}
+	]
 }

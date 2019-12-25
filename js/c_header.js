@@ -23,27 +23,74 @@ function loadData(){
                   // $('.goodsList').html(results);
                   
                   //tou bu 切换
-                  function c_fn6(){
-                        var c_arr1=jsonArr.json1;
-                        var c_results1=''
-                              $.each(c_arr1,function(index,item){
-                             c_results1+=`<li>
-                              <a href="">
-                                    <div class="c_container3_img"><img src="${item.imgurl}" alt=""></div>
-                                    <div>
-                                          <div class="c_title">${item.title}</div>
-                                          <p>
-                                                ${item.price}元起
-                                          </p>
-                                    </div>
-                              </a>
-                        </li>`
-                        });
-                        $('.c_nav_menu .c_container3 ul').html(c_results1);  
-                  }
-                  c_fn6();
+                  function c_fn3(){
 
-                  function c_fn4() {//dalunbotu
+                        function c_fn6(){
+                              var c_arr1=jsonArr.json1;
+                              var c_results1=''
+                                    $.each(c_arr1,function(index,item){
+                                   c_results1+=`<li>
+                                    <a href="">
+                                          <div class="c_container3_img"><img src="${item.imgurl}" alt=""></div>
+                                          <div>
+                                                <div class="c_title">${item.title}</div>
+                                                <p>
+                                                      ${item.price}元起
+                                                </p>
+                                          </div>
+                                    </a>
+                              </li>`
+                              });
+                              $('.c_nav_menu .c_container3 ul').html('');  
+                              $('.c_nav_menu .c_container3 ul').html(c_results1);  
+                        }
+                        c_fn6();
+
+                        function c_fn6a(){
+                              var c_arr6a=jsonArr.json15;
+                              var c_results6a=''
+                                    $.each(c_arr6a,function(index,item){
+                                   c_results6a+=`<li>
+                                    <a href="">
+                                          <div class="c_container3_img"><img src="${item.imgurl}" alt=""></div>
+                                          <div>
+                                                <div class="c_title">${item.title}</div>
+                                                <p>
+                                                      ${item.price}元起
+                                                </p>
+                                          </div>
+                                    </a>
+                              </li>`
+                              });
+                              $('.c_nav_menu .c_container3 ul').html('');  
+                              $('.c_nav_menu .c_container3 ul').html(c_results6a);  
+                        }
+                        c_fn6a();
+
+                        
+                        $('.c_header_nav').on('mouseenter','.c_ula',function(){
+                              $('.c_nav_menu').slideDown( 500 , 'swing' , function (){ } );
+                        });
+                        $('.c_header_nav ').on('mouseenter','.c_ula li',function(){
+                             
+                              if($(this).text()=='小米手机'||$(this).text()=='电视'||$(this).text()=='智能硬件'||$(this).text()=='家电'){
+                                    c_fn6();
+                              }
+                              if($(this).text()=='笔记本'||$(this).text()=='路由器'||$(this).text()=='Redmi红米'){
+                                    c_fn6a();
+                              }    
+                        });
+                        $('.c_header_nav').on('mouseleave','.c_ula',function(){
+                              $('.c_nav_menu').slideUp( 200 , 'swing' , function (){ } );
+                        })
+                        
+
+                  }
+                  c_fn3();
+
+
+                  //dalunbotu
+                  function c_fn4() {
                         var c_arr2=jsonArr.json2;
                         var c_results2 = '';
                         $.each(c_arr2,function(index,item){
@@ -131,46 +178,61 @@ function loadData(){
                         });
                         $('.c_row1_right ul').html(c_results3);  
 
-                        
-                        // var warp=document.querySelector('.warp');
-                        // var inner=document.querySelector('.inner');
-                        // con2.innerHTML=con1.innerHTML;
-                        // var max = con1.clientWidth;
                         var img1w =($('.c_row1_right ul li').width() + 14)*4;
                         var c_row1_right=document.querySelector('.c_row1_right');
-                        // console.log(img1w);
+                        
                         var timer;
                         var x=0;
-                        function move(){
+                        function c_move1(){
+                              clearInterval(timer);
                               timer = setInterval(function (){
-                                    x+=2;
+                                    x+=img1w;
                                     if(x%img1w==0){
                                          clearInterval(timer);
                                          setTimeout(function(){
-                                               move();
-                                         },3000)
+                                               c_move1();
+                                         },2000)
                                     }
                                     if (x>=img1w*2) {
                                           x = 0;
-                                          c_row1_right.scrollLeft=0;
+                                         //$('.c_row1_right').scrollLeft=0;
+                                         c_row1_right.scrollLeft=0;
                                     }
                                     else{
+                                          //$('.c_row1_right').scrollLeft=x;
                                           c_row1_right.scrollLeft=x;
-                                          // console.log(c_row1_right.scrollLeft);
+                                          
                                     }
-                              },1);
-                              $('.c_controls1_a').click(function(){
-                                    clearInterval(timer);
-                              });
+                                   
+                                    
+                              },1000);
+                             
+                              
                         }
-                        move();
+                        c_move1();
+                        $('.c_controls1_a').click(function(){
+                              clearInterval(timer);
+                              c_row1_right.scrollLeft=x-img1w ;
+                              
+                              setTimeout(function(){
+                                    clearInterval(timer);
+                                    c_move1();
+                              },2000)
+                        });
+                        $('.c_controls1_b').click(function(){
+                              clearInterval(timer);
+                              c_row1_right.scrollLeft=x+img1w;
+                              
+                              setTimeout(function(){
+                                    clearInterval(timer);
+                                    c_move1();
+                              },2000)
+                        }); 
                         
-
                   }
                   c_fn5();
                  
                   
-               
 
 
 
@@ -493,6 +555,103 @@ function loadData(){
                   $('.c_controls6_c').mouseenter(function(){
                         c_fn21();
                   })
+
+
+                  //购物车
+                  function c_fn22(){
+                        var c_arr22=jsonArr.json16;
+                        var c_results22='';
+                              $.each(c_arr22,function(index,item){
+                             c_results22+=`<li code="${item.code}">
+                             <a href="JavaScript:void(0)">
+                                   <div class="c_container7">
+                                         <img src="${item.imgurl}" alt="">
+                                   
+                                   <p class="c_container7p">${item.title}</p>
+                                   <h4>${item.price}元</h4>
+                                   <h5>
+                                         加入购物车 
+                                   </h5>
+                             </div> 
+                             </a>
+                       </li>`
+                        });
+                        $('.c_ul7').html(c_results22);
+                        
+                        function addGoods(){
+                              // 点击加入购物车
+                              $('.c_ul7').on('click','li a h5',function (){
+                                  // localStorage -> key  :  value
+                                               //  goods  : "{code: ['abc3','abc4']}"
+                                  // 获取点击商品的编号
+                                  var code = $(this).parent().parent().attr('code');// 'abc2'
+                          
+                                  // 判断当前本地存储是否有加入购物车的商品 ['abc3','abc4']
+                                  if (localStorage.getItem('goods')) {
+                                      var codeArr = JSON.parse(localStorage.getItem('goods')).code;
+                                  } else {
+                                      var codeArr = [];
+                                  }
+                          
+                                  // 把点击商品的编号放到商品编号数组中
+                                  codeArr.push(code);
+                          
+                                  // 获取要存储的json字符串 "{code: ['abc3','abc4']}"
+                                  var jsonStr = JSON.stringify({"code":codeArr});
+                          
+                                  // 存储到本地数据
+                                  localStorage.setItem('goods',jsonStr);
+                          
+                                  alert('成功加入购物车！');
+                              });
+                        }
+
+
+                        // if (localStorage.getItem('goods')) {
+                              //本地数据  ["abc2","abc6","abc8","abc1"]
+                              // var codeArr = JSON.parse(localStorage.getItem('goods')).code;
+                          
+                              // 加载数据
+                              // function loadData(){
+                              //       // 加载数据
+                              //       $.ajax({
+                              //           url: './data/goods.json',
+                              //           type: 'get',
+                              //           cache: false,
+                              //           dataType: 'json',
+                              //           success: function (jsonArr){
+                              //               var results = '';
+                              //               $.each(codeArr,function (i,code){// code = 'abc2'
+                              //                   $.each(jsonArr,function (index,item){// item = {...,code:'abc8'}
+                              //                       if (code == item.code) {// 判断是否为购物车的数据
+                              //                           results += `<li code="${item.code}">
+                              //                               <img src="${item.imgurl}" alt="">
+                              //                               <h5>${item.title}</h5>
+                              //                               <p>${item.price}</p>
+                              //                               <span>删除</span>
+                              //                           </li>`;
+                              //                       }
+                              //                   });
+                              //               });
+                              //               $('.list').append(results);
+                              //           }
+                              //       });
+                              //   }
+                          
+                              // 删除购物车商品
+                              // removeGoods();
+                          
+                        //   } else {
+                        //       $('.list').append('<li style="line-height: 80px; text-align: center; color: #999;">购物车暂无数据！</li>');
+                        //   }
+                          
+                        addGoods();
+                  }
+                  c_fn22();
+
+
+
+
             }
       });
       
@@ -523,15 +682,7 @@ function c_fn1(){
 }
 c_fn1();
 
-function c_fn3(){
-      $('.c_header_nav').mouseenter(function(){
-            $('.c_nav_menu').slideDown( 500 , 'swing' , function (){ } );
-      })
-      $('.c_header_nav').on('mouseleave','.c_ula',function(){
-            $('.c_nav_menu').slideUp( 200 , 'swing' , function (){ } );
-      })
-}
-c_fn3();
+
 
 
 

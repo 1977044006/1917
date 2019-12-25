@@ -121,8 +121,18 @@
                               text-align: center;
                               color: #b0b0b0;
                               background: #424242;
+                              text-decoration: none;
+                              cursor: pointer;
+                              span{
+                                    color: red;
+                              }
                         }
-                       
+                        a:hover{
+                              
+                              color: red;
+                              background: white;
+                              
+                        }
                         .c_cart{
                               display: none;
                               position: absolute;
@@ -138,6 +148,16 @@
                               display: none;
                               -webkit-transition: height .3s;
                               transition: height .3s;
+                              a{
+                                    display: block;
+                                    font-size: 18px;
+                                    line-height: 100px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    em{
+                                          color: red;
+                                    }
+                              }
                         }
                   }
             }
@@ -160,11 +180,20 @@
                               overflow: hidden;
                               background-color: #ff6700;
                               *background: url(/i/logo.png) no-repeat 50% 50%;
+                              em{
+                                    display: block;
+                                   
+                                    line-height: 55px;
+                                    text-align: center;
+                                    font-size: 34px;
+                                    color: white;
+                              }
                         }
                   }
                   .c_header_nav{
                         float: left;
                         width: 850px;
+                        height: 88px;
                         ul{
                               position: relative;
                               z-index: 10; 
@@ -176,6 +205,7 @@
                               list-style-type: none;
                               font-size: 16px;
                               line-height: 0px;
+
                               .c_nav_menu{
                                     width: 1226px;
                                     height: 230px;
@@ -1291,11 +1321,58 @@
                                           width: 234px;
                                           margin-left: 14px;
                                           margin-bottom: 14px;
-                                          background: #fff;
+                                          background:#fff;
                                           -webkit-transition: all .2s linear;
                                           transition: all .2s linear;
-                                          background:#b0b0b0;
                                           
+                                          a{
+                                                display: block;
+                                                width: 234px; 
+                                                height: 300px; 
+                                                text-decoration: none; 
+                                                  
+                                                .c_container7{
+                                                      width: 200px; 
+                                                      height: 266px;  
+                                                      padding:  17px;
+                                                      position: relative;
+                                                      img{
+                                                            display: inline-block;
+                                                            width: 180px;
+                                                            height: 180px;
+                                                            margin: 0 10px;
+                                                      }
+                                                      .c_container7p{
+                                                            width: 200px;
+                                                            height: 28px;
+                                                            line-height: 28px;
+                                                            text-align: center;
+                                                            font-size: 14px;
+                                                      }
+                                                      h4{
+                                                            color: coral;
+                                                            text-align: center;
+                                                      }
+                                                      h5{
+                                                            line-height: 30px;
+                                                            width: 50%;
+                                                            text-align: center;
+                                                            height: 30px;
+                                                            background:coral;
+                                                            color: white;
+                                                            cursor: pointer;
+                                                            position: absolute;
+                                                            right: 17px;
+                                                            bottom: 17px;
+                                                      }
+                                                      h5:hover{
+                                                            background:red;
+                                                            color: white;
+                                                            
+                                                      }
+                                                }
+                                                     
+                                          }
                                     }
                               }
                         }
