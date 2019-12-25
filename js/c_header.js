@@ -159,7 +159,7 @@ function loadData(){
                                           // console.log(c_row1_right.scrollLeft);
                                     }
                               },1);
-                              $('c_controls1_a').click(function(){
+                              $('.c_controls1_a').click(function(){
                                     clearInterval(timer);
                               });
                         }
