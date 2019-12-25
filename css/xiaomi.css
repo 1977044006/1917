@@ -2,8 +2,10 @@
   width: 100%;
   height: 56px;
   background: #333;
+  position: fixed;
+  top: 0;
   left: 0;
-  top: 0; }
+  z-index: 10000; }
   .x-wrap .x-header .x-main {
     width: 1263px;
     margin: 0 auto; }
@@ -144,7 +146,7 @@
       border: 1px solid #fff;
       border-radius: 20px;
       background: #333; }
-      .x-wrap .x-header .x-login .x-btn span {
+      .x-wrap .x-header .x-login .x-btn a {
         color: #fff;
         text-align: center; }
     .x-wrap .x-header .x-login .x-btn:hover {
@@ -155,7 +157,8 @@
   max-width: 100%;
   min-width: 1200px;
   position: relative;
-  background-size: cover; }
+  background-size: cover;
+  margin-top: 56px; }
   .x-wrap .x-banner .x-banner1 {
     height: 360px;
     width: 100%;
@@ -209,7 +212,8 @@
     width: 100%;
     background: url(../img/xx-pic3.jpg) no-repeat center;
     background-size: cover;
-    position: absolute; }
+    position: absolute;
+    display: none; }
     .x-wrap .x-banner .x-banner3 .x-banner3-title {
       text-shadow: 0 9px 7px rgba(0, 0, 0, 0.5);
       font-size: 48px;
@@ -236,7 +240,7 @@
           border: 2px solid #00eaff;
           color: #fff;
           transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 0.1); }
-  .x-wrap .x-banner .x-banner3show {
+  .x-wrap .x-banner .x-banner-show {
     display: block; }
 
 .x-wrap .x-threebtn {
@@ -361,3 +365,19 @@
       cursor: pointer; }
     .x-wrap .x-foot2 .x-foot2-bottom .x-lastchild {
       border: none; }
+
+.x-wrap .x-backtop {
+  width: 50px;
+  height: 50px;
+  background: #666;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 200px;
+  right: 50px;
+  display: block; }
+  .x-wrap .x-backtop a {
+    text-align: center;
+    font-size: 12px;
+    line-height: 50px;
+    display: block;
+    color: #fff; }

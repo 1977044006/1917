@@ -3,9 +3,10 @@
         width:100%;
         height: 56px;
         background: #333;
-        // position: fixed;
-        left: 0;
-        top: 0;
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 10000;
         .x-main{
             width: 1263px;
             margin: 0 auto;
@@ -181,7 +182,7 @@
                     border: 1px solid #fff;
                     border-radius: 20px;
                     background: #333;
-                    span{
+                    a{
                         color: #fff;
                         text-align: center;
                     }
@@ -197,6 +198,7 @@
         min-width: 1200px;
         position: relative;
         background-size: cover;
+        margin-top: 56px;
         .x-banner1{
             height: 360px;
             width: 100%;
@@ -258,6 +260,7 @@
                 background: url(../img/xx-pic3.jpg) no-repeat center;
                 background-size: cover;
                 position: absolute;
+                display: none;
                 .x-banner3-title{
                     text-shadow: 0 9px 7px rgba(0,0,0,.5);
                     font-size: 48px;
@@ -290,7 +293,7 @@
                     }
                 }
             }
-            .x-banner3show{
+            .x-banner-show{
                 display: block;
             }
         }
@@ -445,6 +448,23 @@
             .x-lastchild{
                 border:none;
             }
+        }
+    }
+    .x-backtop{
+        width: 50px;
+        height: 50px;
+        background: #666;
+        border-radius: 50%;
+        position: fixed;
+        bottom:200px;
+        right: 50px;
+        display: block;
+        a{
+            text-align: center;
+            font-size: 12px;
+            line-height: 50px;
+            display: block;
+            color: #fff;
         }
     }
 }

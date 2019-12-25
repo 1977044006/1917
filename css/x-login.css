@@ -1,0 +1,117 @@
+body {
+  background: #f5f5f5; }
+  body .x-login-wrap {
+    background: #f5f5f5;
+    width: 854px;
+    margin: 0 auto 20px; }
+    body .x-login-wrap .x-login-content {
+      width: 854px;
+      margin: 0 auto 20px;
+      padding-bottom: 100px;
+      background: #fff;
+      position: relative; }
+      body .x-login-wrap .x-login-content .x-login-content-top {
+        width: 854px;
+        padding: 50px 0 22px 0;
+        text-align: center; }
+        body .x-login-wrap .x-login-content .x-login-content-top .x-xiaomi-logo {
+          width: 48px;
+          height: 48px;
+          background: #ff6700;
+          border-radius: 2px;
+          margin: 0 auto; }
+          body .x-login-wrap .x-login-content .x-login-content-top .x-xiaomi-logo i {
+            color: #fff;
+            line-height: 48px;
+            text-align: center;
+            font-size: 36px;
+            display: block;
+            text-align: center; }
+        body .x-login-wrap .x-login-content .x-login-content-top h4 {
+          padding: 22px 0 0;
+          font-size: 30px;
+          font-weight: normal; }
+      body .x-login-wrap .x-login-content .x-login-content-center {
+        width: 358px;
+        margin: 0 auto; }
+        body .x-login-wrap .x-login-content .x-login-content-center form input {
+          padding-left: 10px;
+          width: 356px;
+          height: 48px;
+          margin-top: 10px;
+          border: none;
+          border: 1px solid #ccc; }
+        body .x-login-wrap .x-login-content .x-login-content-center form .x-erro-alert span {
+          color: red;
+          font-size: 14px; }
+        body .x-login-wrap .x-login-content .x-login-content-center form .x-login-content-center-btn {
+          width: 368px;
+          height: 48px;
+          margin: 10px 0 10px 0;
+          border: none;
+          border: 1px solid #ccc;
+          background-color: #ff6700; }
+          body .x-login-wrap .x-login-content .x-login-content-center form .x-login-content-center-btn span {
+            color: #fff;
+            font-size: 14px; }
+        body .x-login-wrap .x-login-content .x-login-content-center .x-forgetpass .x-forgetpass-top .x-forgetpass-top-left {
+          display: block;
+          font-size: 14px;
+          color: #333;
+          cursor: pointer;
+          display: inline-block; }
+          body .x-login-wrap .x-login-content .x-login-content-center .x-forgetpass .x-forgetpass-top .x-forgetpass-top-left span {
+            color: #ff6700; }
+        body .x-login-wrap .x-login-content .x-login-content-center .x-forgetpass .x-forgetpass-top .x-forgetpass-top-right {
+          float: right; }
+          body .x-login-wrap .x-login-content .x-login-content-center .x-forgetpass .x-forgetpass-top .x-forgetpass-top-right a {
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            display: inline-block; }
+        body .x-login-wrap .x-login-content .x-login-content-center .x-forgetpass-bottom {
+          width: 358px;
+          margin: 0 auto;
+          margin: 20px 0 30px 0; }
+          body .x-login-wrap .x-login-content .x-login-content-center .x-forgetpass-bottom .x-login-content-bottom-line {
+            width: 358px;
+            height: 29px;
+            border: 0;
+            border-top: 1px solid #e0e0e0; }
+            body .x-login-wrap .x-login-content .x-login-content-center .x-forgetpass-bottom .x-login-content-bottom-line .x-login-content-bottom-otherlogin {
+              font-size: 14px;
+              color: #b0b0b0;
+              margin: 0 auto;
+              text-align: center; }
+          body .x-login-wrap .x-login-content .x-login-content-center .x-forgetpass-bottom .x-login-content-bottom-img {
+            padding: 10px 0 0 80px; }
+      body .x-login-wrap .x-login-content .x-login-content-center-erweima {
+        background: url(../img/xx-erweima.gif) no-repeat;
+        width: 68px;
+        height: 68px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0.3;
+        cursor: pointer; }
+      body .x-login-wrap .x-login-content .x-login-content-center-erweima:hover {
+        opacity: 1; }
+    body .x-login-wrap .x-foot2 {
+      width: 100%; }
+      body .x-login-wrap .x-foot2 .x-foot2-bottom {
+        text-align: center; }
+        body .x-login-wrap .x-foot2 .x-foot2-bottom a {
+          color: #8b8b8b;
+          font-size: 14px;
+          margin: 5px 0 5px 0;
+          padding: 0 5px 0 5px;
+          border-right: 1px solid #8b8b8b;
+          display: inline-block; }
+        body .x-login-wrap .x-foot2 .x-foot2-bottom a:hover {
+          cursor: pointer; }
+        body .x-login-wrap .x-foot2 .x-foot2-bottom .x-lastchild {
+          border: none; }
+      body .x-login-wrap .x-foot2 p {
+        text-align: center;
+        color: #8b8b8b;
+        font-size: 14px; }
