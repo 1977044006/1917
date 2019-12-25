@@ -159,8 +159,12 @@ function loadData(){
                                           // console.log(c_row1_right.scrollLeft);
                                     }
                               },1);
+                              $('c_controls1_a').click(function(){
+                                    clearInterval(timer);
+                              });
                         }
                         move();
+                        
 
                   }
                   c_fn5();
