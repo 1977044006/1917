@@ -40,17 +40,24 @@ body {
           height: 48px;
           margin-top: 10px;
           border: none;
-          border: 1px solid #ccc; }
-        body .x-login-wrap .x-login-content .x-login-content-center form .x-erro-alert span {
-          color: red;
-          font-size: 14px; }
+          border: 1px solid #e0e0e0; }
+        body .x-login-wrap .x-login-content .x-login-content-center form .x-erro-alert {
+          position: relative;
+          height: 30px;
+          width: 100%; }
+          body .x-login-wrap .x-login-content .x-login-content-center form .x-erro-alert .x-erro-alert-write {
+            color: red;
+            font-size: 14px;
+            position: absolute;
+            display: none;
+            line-height: 30px; }
         body .x-login-wrap .x-login-content .x-login-content-center form .x-login-content-center-btn {
           width: 368px;
           height: 48px;
           margin: 10px 0 10px 0;
           border: none;
-          border: 1px solid #ccc;
-          background-color: #ff6700; }
+          background-color: #ff6700;
+          cursor: pointer; }
           body .x-login-wrap .x-login-content .x-login-content-center form .x-login-content-center-btn span {
             color: #fff;
             font-size: 14px; }

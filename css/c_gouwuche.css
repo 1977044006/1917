@@ -1,0 +1,42 @@
+.c_head {
+  font-size: 12px;
+  border-bottom: 2px solid #ff6700;
+  background: #fff;
+  color: #b0b0b0;
+  height: 100px; }
+  .c_head .c_contain1 {
+    width: 1226px;
+    height: 74px;
+    *zoom: 1;
+    margin-right: auto;
+    margin-left: auto; }
+    .c_head .c_contain1 .c_head_logo {
+      float: left;
+      width: 62px;
+      margin-top: 24px;
+      margin-right: 46px; }
+      .c_head .c_contain1 .c_head_logo em {
+        display: block;
+        width: 48px;
+        height: 48px;
+        background-color: #ff6700;
+        font-size: 34px;
+        color: white;
+        line-height: 48px;
+        text-align: center; }
+    .c_head .c_contain1 .c_head_title {
+      float: left;
+      margin-top: 24px; }
+      .c_head .c_contain1 .c_head_title h2 {
+        float: left;
+        line-height: 48px;
+        margin-bottom: 0;
+        font-size: 28px;
+        font-weight: normal;
+        color: #424242; }
+      .c_head .c_contain1 .c_head_title p {
+        float: left;
+        height: 20px;
+        line-height: 20px;
+        margin-top: 20px;
+        margin-left: 15px; }

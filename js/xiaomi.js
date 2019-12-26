@@ -22,15 +22,6 @@ $('.x-console').bind({
      }
 })
 
-//点击按钮出现图片事件
-$('.x-threebtn div').click(function(){
-    $(this).addClass('x-activing').siblings('div').removeClass('x-activing');
-    var index_temp=$(this).index();  //点击获取当前的index
-    $('.x-banner-common').eq(index_temp).addClass('x-banner-show').siblings('.x-banner-common').removeClass('x-banner-show');
-    index = index_temp;
-})
-
-
 //返回顶部效果
 var backtop=document.querySelector('.x-backtop');
 var scrollT=document.body.scrollTop||document.documentElement.scrollTop;
@@ -61,6 +52,14 @@ backtop.onclick=function(){
 }, 5);
 }
 
+//点击按钮出现图片事件
+$('.x-threebtn div').click(function(){
+    $(this).addClass('x-activing').siblings('div').removeClass('x-activing');
+    var index_temp=$(this).index();  //点击获取当前的index
+    $('.x-banner-common').eq(index_temp).addClass('x-banner-show').siblings('.x-banner-common').removeClass('x-banner-show');
+    index = index_temp;
+})
+
 //轮播定时器，鼠标移入移出事件
 var index = 0;
 var timer='';
@@ -73,7 +72,7 @@ timer=setInterval(function(){
     if(index==threebtn.length){
         index=0;
     }
-},2000);
+},1000);
 
 
 var bannercommons=$('.x-banner .x-banner-common');

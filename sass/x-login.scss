@@ -45,12 +45,18 @@ body{
                     height: 48px;
                     margin-top: 10px;
                     border: none;
-                    border: 1px solid #ccc;
+                    border: 1px solid #e0e0e0;
                 }
                 .x-erro-alert{
-                    span{
+                    position: relative;
+                    height: 30px;
+                    width: 100%;
+                    .x-erro-alert-write{
                         color: red;
                         font-size: 14px;
+                        position: absolute;
+                        display: none;
+                        line-height: 30px;
                     }
                 }
                 .x-login-content-center-btn{
@@ -58,8 +64,8 @@ body{
                     height: 48px;
                     margin: 10px 0 10px 0;
                     border: none;
-                    border: 1px solid #ccc;
                     background-color: #ff6700;
+                    cursor: pointer;
                     span{
                         color: #fff;
                         font-size: 14px;
