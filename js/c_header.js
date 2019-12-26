@@ -559,95 +559,128 @@ function loadData(){
 
                   //购物车
                   function c_fn22(){
-                        var c_arr22=jsonArr.json16;
-                        var c_results22='';
-                              $.each(c_arr22,function(index,item){
-                             c_results22+=`<li code="${item.code}">
-                             <a href="JavaScript:void(0)">
-                                   <div class="c_container7">
-                                         <img src="${item.imgurl}" alt="">
-                                   
-                                   <p class="c_container7p">${item.title}</p>
-                                   <h4>${item.price}元</h4>
-                                   <h5>
-                                         加入购物车 
-                                   </h5>
-                             </div> 
-                             </a>
-                       </li>`
+                              var c_arr22=jsonArr.json16;
+                              var c_results22='';
+                                    $.each(c_arr22,function(index,item){
+                              c_results22+=`<li code="${item.code}">
+                              <a href="JavaScript:void(0)">
+                                    <div class="c_container7">
+                                                <img src="${item.imgurl}" alt="">
+                                          
+                                          <p class="c_container7p">${item.title}</p>
+                                          <h4>${item.price}元</h4>
+                                          <h5>
+                                                加入购物车 
+                                          </h5>
+                                    </div> 
+                              </a>
+                        </li>`
+                        
                         });
+                        
                         $('.c_ul7').html(c_results22);
                         
-                        function addGoods(){
-                              // 点击加入购物车
-                              $('.c_ul7').on('click','li a h5',function (){
-                                  // localStorage -> key  :  value
-                                               //  goods  : "{code: ['abc3','abc4']}"
-                                  // 获取点击商品的编号
-                                  var code = $(this).parent().parent().attr('code');// 'abc2'
-                          
-                                  // 判断当前本地存储是否有加入购物车的商品 ['abc3','abc4']
-                                  if (localStorage.getItem('goods')) {
-                                      var codeArr = JSON.parse(localStorage.getItem('goods')).code;
-                                  } else {
-                                      var codeArr = [];
-                                  }
-                          
-                                  // 把点击商品的编号放到商品编号数组中
-                                  codeArr.push(code);
-                          
-                                  // 获取要存储的json字符串 "{code: ['abc3','abc4']}"
-                                  var jsonStr = JSON.stringify({"code":codeArr});
-                          
-                                  // 存储到本地数据
-                                  localStorage.setItem('goods',jsonStr);
-                          
-                                  alert('成功加入购物车！');
-                              });
-                        }
-
-
-                        // if (localStorage.getItem('goods')) {
-                              //本地数据  ["abc2","abc6","abc8","abc1"]
-                              // var codeArr = JSON.parse(localStorage.getItem('goods')).code;
-                          
-                              // 加载数据
-                              // function loadData(){
-                              //       // 加载数据
-                              //       $.ajax({
-                              //           url: './data/goods.json',
-                              //           type: 'get',
-                              //           cache: false,
-                              //           dataType: 'json',
-                              //           success: function (jsonArr){
-                              //               var results = '';
-                              //               $.each(codeArr,function (i,code){// code = 'abc2'
-                              //                   $.each(jsonArr,function (index,item){// item = {...,code:'abc8'}
-                              //                       if (code == item.code) {// 判断是否为购物车的数据
-                              //                           results += `<li code="${item.code}">
-                              //                               <img src="${item.imgurl}" alt="">
-                              //                               <h5>${item.title}</h5>
-                              //                               <p>${item.price}</p>
-                              //                               <span>删除</span>
-                              //                           </li>`;
-                              //                       }
-                              //                   });
-                              //               });
-                              //               $('.list').append(results);
-                              //           }
-                              //       });
-                              //   }
-                          
-                              // 删除购物车商品
-                              // removeGoods();
-                          
-                        //   } else {
-                        //       $('.list').append('<li style="line-height: 80px; text-align: center; color: #999;">购物车暂无数据！</li>');
-                        //   }
-                          
-                        addGoods();
+                        
+                             
                   }
                   c_fn22();
+                  // 点击加入购物车
+                  function addGoods(){
+                                                
+                        $('.c_ul7').on('click','li a h5',function (){
+                        // localStorage -> key  :  value
+                                    //  goods  : "{code: ['abc3','abc4']}"
+                        // 获取点击商品的编号
+                        var code = $(this).parent().parent().parent().attr('code');// 'abc2'
+                        console.log(code);
+                        
+                        // 判断当前本地存储是否有加入购物车的商品 ['abc3','abc4']
+                        if (localStorage.getItem('goods')) {
+                              var codeArr = JSON.parse(localStorage.getItem('goods')).code;
+                        } else {
+                              var codeArr = [];
+                        }
+
+                        // 把点击商品的编号放到商品编号数组中
+                        codeArr.push(code);
+                  
+                        // 获取要存储的json字符串 "{code: ['abc3','abc4']}"
+                        var jsonStr = JSON.stringify({"code":codeArr});
+                  
+                        // 存储到本地数据
+                        localStorage.setItem('goods',jsonStr);
+                        // localStorage.removeItem('goods');
+                        alert('成功加入购物车！');
+                        console.log(jsonStr);
+                       
+                        });
+                  }
+                  addGoods();
+
+                  if (localStorage.getItem('goods')) {
+                        //本地数据  ["abc2","abc6","abc8","abc1"]
+                        var codeArr = JSON.parse(localStorage.getItem('goods')).code;
+                              //加载数据
+                              var jsonArr=jsonArr.json16;
+                              function c_fn23(jsonArr){
+                                    var results = '';
+                                    $.each(codeArr,function (i,code){// code = 'abc2'
+                                          $.each(jsonArr,function (index,item){// item = {...,code:'abc8'}
+                                                if (code == item.code) {// 判断是否为购物车的数据
+                                                      results += `<div class="item_table">
+                                                      <div class="col_check_box2">
+                                                            <input type="checkbox" class="select_all2">
+                                                            
+                                                      </div>
+                                                      <div class="col_img2">
+                                                            <img src="./img/chuxing/c_chu1.jpg" alt="">
+                                                      </div>
+                                                      <div class="col_name2">
+                                                            小米水质TDS检测笔 白色
+                                                      </div>
+                                                      <div class="col_price2">
+                                                            39元
+                                                      </div>
+                                                      <div class="col_mun2">
+                                                            1
+                                                      </div>
+                                                      <div class="col_total2">
+                                                            小计
+                                                      </div>
+
+                                                      <div class="col_action2">
+                                                            <span>x</span>
+                                                      </div>
+                                                </div>`
+                                                }
+                                          });
+                                    });
+                                    $('.list').append(results);
+                              }
+                        //  c_fn23();
+               
+                  }     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
