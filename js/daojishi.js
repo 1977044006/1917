@@ -19,8 +19,16 @@ setInterval(function (){
     var seconds = 59 - d2.getSeconds();
 
     // var millis = 999 - d2.getMilliseconds();
-    
-    c_count_down1.innerText = hours;
-    c_count_down2.innerText = minutes;
-    c_count_down3.innerText = seconds;
+
+    function addo(n){
+        if(n < 10) {
+        return '0' + n;  
+        }else{
+        return n;
+        }
+    }
+
+    c_count_down1.innerText =addo(hours);
+    c_count_down2.innerText =addo(minutes);
+    c_count_down3.innerText =addo(seconds);
 },1000);

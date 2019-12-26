@@ -69,6 +69,8 @@
         color: #b0b0b0;
         font-size: 12px; }
         .c_header .c_site_topbar .c_container1 .c_topbar_cen a {
+          text-decoration: none;
+          color: #b0b0b0;
           padding: 0 5px;
           text-align: center;
           cursor: pointer; }

@@ -3,11 +3,11 @@
 
 // c_headerShop();
 // c_headerApp();
-
+// console.log(1);
 function loadData(){
     
       // 加载数据
-      //  console.log(1);
+      // console.log(1);
       $.ajax({
             url: './data/c_header_app1.json',
             type: 'get',
@@ -69,7 +69,7 @@ function loadData(){
 
                         
                         $('.c_header_nav').on('mouseenter','.c_ula',function(){
-                              $('.c_nav_menu').slideDown( 500 , 'swing' , function (){ } );
+                              $('.c_nav_menu').stop().slideDown( 300 , 'swing' , function (){ } );
                         });
                         $('.c_header_nav ').on('mouseenter','.c_ula li',function(){
                              
@@ -81,7 +81,7 @@ function loadData(){
                               }    
                         });
                         $('.c_header_nav').on('mouseleave','.c_ula',function(){
-                              $('.c_nav_menu').slideUp( 200 , 'swing' , function (){ } );
+                              $('.c_nav_menu').stop().slideUp( 200 , 'swing' , function (){ } );
                         })
                         
 
@@ -165,6 +165,7 @@ function loadData(){
                         var c_arr3=jsonArr.json3;
                         var c_results3 = '';
                         $.each(c_arr3,function(index,item){
+                              // console.log(index);    
                               // console.log(item.imgurl);
                               c_results3+=`<li>
                               <a href="">
@@ -187,47 +188,47 @@ function loadData(){
                               clearInterval(timer);
                               timer = setInterval(function (){
                                     x+=img1w;
-                                    if(x%img1w==0){
-                                         clearInterval(timer);
-                                         setTimeout(function(){
-                                               c_move1();
-                                         },2000)
-                                    }
-                                    if (x>=img1w*2) {
+                                    // if(x%img1w==0){
+                                    //      clearInterval(timer);
+                                    //      setTimeout(function(){
+                                    //            c_move1();
+                                    //      },1000)
+                                    // }
+                                    if (x>img1w*3) {
                                           x = 0;
-                                         //$('.c_row1_right').scrollLeft=0;
+                                        
                                          c_row1_right.scrollLeft=0;
                                     }
                                     else{
-                                          //$('.c_row1_right').scrollLeft=x;
-                                          c_row1_right.scrollLeft=x;
                                           
+                                          c_row1_right.scrollLeft=x;
                                     }
-                                   
+                                    $('.c_controls1_a').click(function(){
+                                          clearInterval(timer);
+                                          c_row1_right.scrollLeft=x-img1w ;
+                                          setTimeout(function(){
+                                                clearInterval(timer);
+                                                c_move1();
+                                          },1000)
+                                    });
+                                    $('.c_controls1_b').click(function(){
+                                          clearInterval(timer);
+                                          if(x>3*img1w){
+                                                c_row1_right.scrollLeft=0;
+                                          }else{
+                                                c_row1_right.scrollLeft=x+img1w;
+                                          }
+                                          setTimeout(function(){
+                                                clearInterval(timer);
+                                                c_move1();
+                                          },1000)
+                                    }); 
                                     
                               },1000);
                              
                               
                         }
                         c_move1();
-                        $('.c_controls1_a').click(function(){
-                              clearInterval(timer);
-                              c_row1_right.scrollLeft=x-img1w ;
-                              
-                              setTimeout(function(){
-                                    clearInterval(timer);
-                                    c_move1();
-                              },2000)
-                        });
-                        $('.c_controls1_b').click(function(){
-                              clearInterval(timer);
-                              c_row1_right.scrollLeft=x+img1w;
-                              
-                              setTimeout(function(){
-                                    clearInterval(timer);
-                                    c_move1();
-                              },2000)
-                        }); 
                         
                   }
                   c_fn5();
@@ -418,6 +419,7 @@ function loadData(){
                   }
                   function c_fn16(){
                         var c_arr16=jsonArr.json13;
+
                         var c_results16='';
                               $.each(c_arr16,function(index,item){
                              c_results16+=`<li>
@@ -557,7 +559,7 @@ function loadData(){
                   })
 
 
-                  //购物车
+                 // 购物车
                   function c_fn22(){
                         var c_arr22=jsonArr.json16;
                         var c_results22='';
@@ -578,13 +580,14 @@ function loadData(){
                         });
                         $('.c_ul7').html(c_results22);
                         
+                        
                         function addGoods(){
                               // 点击加入购物车
                               $('.c_ul7').on('click','li a h5',function (){
                                   // localStorage -> key  :  value
                                                //  goods  : "{code: ['abc3','abc4']}"
                                   // 获取点击商品的编号
-                                  var code = $(this).parent().parent().attr('code');// 'abc2'
+                                  var code = $(this).parent().parent().parent().attr('code');// 'abc2'
                           
                                   // 判断当前本地存储是否有加入购物车的商品 ['abc3','abc4']
                                   if (localStorage.getItem('goods')) {
@@ -598,65 +601,40 @@ function loadData(){
                           
                                   // 获取要存储的json字符串 "{code: ['abc3','abc4']}"
                                   var jsonStr = JSON.stringify({"code":codeArr});
-                          
+                               
                                   // 存储到本地数据
                                   localStorage.setItem('goods',jsonStr);
-                          
+                              //     localStorage.removeItem('goods');
                                   alert('成功加入购物车！');
                               });
                         }
-
-
-                        // if (localStorage.getItem('goods')) {
-                              //本地数据  ["abc2","abc6","abc8","abc1"]
-                              // var codeArr = JSON.parse(localStorage.getItem('goods')).code;
-                          
-                              // 加载数据
-                              // function loadData(){
-                              //       // 加载数据
-                              //       $.ajax({
-                              //           url: './data/goods.json',
-                              //           type: 'get',
-                              //           cache: false,
-                              //           dataType: 'json',
-                              //           success: function (jsonArr){
-                              //               var results = '';
-                              //               $.each(codeArr,function (i,code){// code = 'abc2'
-                              //                   $.each(jsonArr,function (index,item){// item = {...,code:'abc8'}
-                              //                       if (code == item.code) {// 判断是否为购物车的数据
-                              //                           results += `<li code="${item.code}">
-                              //                               <img src="${item.imgurl}" alt="">
-                              //                               <h5>${item.title}</h5>
-                              //                               <p>${item.price}</p>
-                              //                               <span>删除</span>
-                              //                           </li>`;
-                              //                       }
-                              //                   });
-                              //               });
-                              //               $('.list').append(results);
-                              //           }
-                              //       });
-                              //   }
-                          
-                              // 删除购物车商品
-                              // removeGoods();
-                          
-                        //   } else {
-                        //       $('.list').append('<li style="line-height: 80px; text-align: center; color: #999;">购物车暂无数据！</li>');
-                        //   }
-                          
+ 
                         addGoods();
+                        (function(){
+                              var codeArr = JSON.parse(localStorage.getItem('goods')).code;
+                              var jsonStr = JSON.stringify({"code":codeArr});
+                              var  c_spana=$('.c_spana');
+                              var  c_ema=$('.c_ema')
+                              var jsonStr1=JSON.parse(jsonStr)
+                              //    console.log(jsonStr1.code);
+                                  var c_index=jsonStr1.code.length;
+                              //     console.log(c_index);
+                                  c_spana.text(` (${c_index})`);
+                                  c_ema.text(c_index);
+                        })();
                   }
                   c_fn22();
-
-
-
 
             }
       });
       
 }
 loadData();
+
+
+
+
+
 
 
 function c_fn2(){
@@ -681,8 +659,6 @@ function c_fn1(){
       })
 }
 c_fn1();
-
-
 
 
 
