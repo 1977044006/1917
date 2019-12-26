@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米账号 - 登录</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+</head>
+<body>
+    <div class="x-login-wrap">
+        <div class="x-login-content">
+            <div class="x-login-content-top">
+                <div class="x-xiaomi-logo">
+                    <i class="iconfont">&#xe832;</i>
+                </div>
+                <h4>小米账号登录</h4>
+            </div>
+            <div class="x-login-content-center">
+                <form action="http://localhost:8080/xiaomi.html" method="post">
+                    <input type="text" placeholder="邮箱/手机号码/小米ID" class="user"/></br>
+                    <input type="password" placeholder="密码" class="pass"/></br>
+                    <div class="x-erro-alert">
+                        <span class="x-erro-alert-write">！请正确输入账号</span>
+                        <span class="x-erro-alert-user x-erro-alert-write">！请输入账号</span>
+                        <span class="x-erro-alert-pass x-erro-alert-write">！请输入密码</span>
+                    </div>
+                    <button class="x-login-content-center-btn">
+                        <span>登录</span>
+                    </button>
+                </form>
+                <div class="x-forgetpass">
+                    <div class="x-forgetpass-top">
+                        <a href="javaScript:;" class="x-forgetpass-top-left"><span >
+                            手机短信登录/注册
+                        </span></a>
+                        <div class="x-forgetpass-top-right">
+                            <a href="javaScript:;"><span>立即注册</span></a>
+                            <a href="javaScript:;"><span>忘记密码?</span></a>
+                        </div>
+                    </div>
+                    <div class="x-forgetpass-bottom">
+                        <fieldset class="x-login-content-bottom-line">
+                            <legend class="x-login-content-bottom-otherlogin">其他方式登录</legend>
+                        </fieldset>
+                        <div class="x-login-content-bottom-img">
+                            <img src="img/xx-pic12.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="x-login-content-center-erweima">
+            </div>
+        </div>
+        <div class="x-foot2">
+            <div class="x-foot2-bottom">
+                <a href="javaScript:;">
+                    简体</a>
+                <a href="javaScript:;">繁体</a>
+                <a href="javaScript:;">English</a>
+                <a href="javaScript:;">隐私政策</a>
+                <a href="javaScript:;" class="x-lastchild">常见问题</a>
+            </div>
+            <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/x-login.js"></script>
+</body>
+</html>

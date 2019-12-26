@@ -39,9 +39,9 @@ gulp.task('sass',function(){   //sass
     .pipe(gulp.dest('./css'))
 });
 gulp.task('concatJs',function (){//合并压缩js
-    return gulp.src(['./js/*.js','!./js/jquery*.js','!./js/swiper.js'])
+    return gulp.src(['./js/**','!./js/jquery*.js','!./js/swiper.js'])
     .pipe(load.babel({presets: ['@babel/preset-env']}))
-    .pipe(load.concat('index.js'))
+    //.pipe(load.concat('index.js'))
     .pipe(load.uglify())
     .pipe(gulp.dest('./dist/js'))
     .pipe(load.connect.reload())
