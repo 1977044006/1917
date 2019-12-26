@@ -47,10 +47,14 @@ body{
                     border: none;
                     border: 1px solid #e0e0e0;
                 }
+
                 .x-erro-alert{
                     position: relative;
                     height: 30px;
                     width: 100%;
+                    span{
+                        background: #fff;
+                    }
                     .x-erro-alert-write{
                         color: red;
                         font-size: 14px;

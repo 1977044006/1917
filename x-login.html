@@ -19,12 +19,14 @@
                 <h4>小米账号登录</h4>
             </div>
             <div class="x-login-content-center">
-                <form action="http://localhost:8080/xiaomi.html" method="post">
+                <form action="http://localhost:8080/x_xiaomi.html" method="post">
                     <input type="text" placeholder="邮箱/手机号码/小米ID" class="user"/></br>
                     <input type="password" placeholder="密码" class="pass"/></br>
                     <div class="x-erro-alert">
-                        <span class="x-erro-alert-write">！请正确输入账号</span>
+                        <span class="x-erro-alert-write">！账号密码不能为空</span>
                         <span class="x-erro-alert-user x-erro-alert-write">！请输入账号</span>
+                        <span class="x-erro-alert-user2 x-erro-alert-write">！请正确输入账号</span>
+                        <span class="x-erro-alert-pass2 x-erro-alert-write">！请正确输入密码</span>
                         <span class="x-erro-alert-pass x-erro-alert-write">！请输入密码</span>
                     </div>
                     <button class="x-login-content-center-btn">
@@ -69,5 +71,6 @@
 
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/x-login.js"></script>
+    <script src="js/cookie.js"></script>
 </body>
 </html>

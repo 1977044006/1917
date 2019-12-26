@@ -45,6 +45,8 @@ body {
           position: relative;
           height: 30px;
           width: 100%; }
+          body .x-login-wrap .x-login-content .x-login-content-center form .x-erro-alert span {
+            background: #fff; }
           body .x-login-wrap .x-login-content .x-login-content-center form .x-erro-alert .x-erro-alert-write {
             color: red;
             font-size: 14px;
