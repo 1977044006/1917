@@ -3,31 +3,15 @@ var ipts=document.querySelectorAll('form input')
 var user=document.querySelector('.user');
 var pass=document.querySelector('.pass');
 var erroalert=document.querySelector('.x-erro-alert-write');
-var errouser=document.querySelector('.x-erro-alert-user');
-var erropass=document.querySelector('.x-erro-alert-pass');
-var errouser2=document.querySelector('.x-erro-alert-user2');
-var erropass2=document.querySelector('.x-erro-alert-pass2');
-
 
 //点击from提交时判断
 form.onsubmit=function(){
     //账号和密码都提交为空时
-    if (!user.value && !pass.value) {
+    if (!user.value || !pass.value) {
+        pass.style.border='1px solid #ff6700';
+        user.style.border='1px solid #ff6700';
         erroalert.style.display='block';
-        pass.style.border='1px solid #ff6700';
-        user.style.border='1px solid #ff6700';
-        return false;
-    }
-    //账号提交为空时
-    if (!user.value) {
-        errouser.style.display='block';
-        user.style.border='1px solid #ff6700';
-        return false;
-    }
-    //密码提交为空时
-    if (!pass.value) {
-        erropass.style.display='block';
-        pass.style.border='1px solid #ff6700';
+        erroalert.innerText = '账号或密码错误';
         return false;
     }
     //账号框正则
@@ -48,26 +32,26 @@ form.onsubmit=function(){
     //判断账号
     if (reg.test(userval)||reg2.test(userval)) {
         result.push(1);  //账号对了push1
+        user.style.border='none';
     } else {
-        errouser2.style.display='block';
+        result.push(0);  //账号错了push0
         user.style.border='1px solid #ff6700';
-        result.push(0);  //账号错了pish0
-        return false;
     }
 
     //判断密码框
     if (reg3.test(passval)) {
         result.push(1);  //账号对了push1
+        pass.style.border='none';
     } else {
-        erropass2.style.display='block';
         result.push(0);  //账号错了push0
-        return false;
+        pass.style.border='1px solid #ff6700';
     }
 
     // 验证每一个输入框是否合法
-    for (var index in result){
-        if (result[index] == 0) {
-            alert('请正确输入账号密码！');
+    for (var i=0; i<result.length; i++){
+        if(result[i] == 0){
+            erroalert.style.display='block';
+            erroalert.innerText = '账号或密码错误';
             return false;
         }
     }
@@ -79,6 +63,9 @@ form.onsubmit=function(){
 $(function() { 
     if (getCookie('username')) {
         user.value = getCookie('username');
+        
+        $('.x_login1').text('');
+        $('.x_login1').text('user.value');
         pass.value = getCookie('userpass');
     }　
 });

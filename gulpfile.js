@@ -63,6 +63,14 @@ gulp.task('iconCopyToDist',function(){  //压缩icon
     .pipe(gulp.dest('./dist/icon'))
     .pipe(load.connect.reload())
 });
+
+gulp.task('c_card',function(){  //c_card.js
+    return gulp.src('./js/c_card.js')
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(load.connect.reload())
+});
+
+
 gulp.task('dataCopyToDist',function(){  //压缩icon
     return gulp.src('./data/*.*')
     .pipe(gulp.dest('./dist/data'))
@@ -92,6 +100,9 @@ gulp.task('watchs',function (cb){
     gulp.watch('./css/*.css',gulp.series('concatCss'));
     gulp.watch('./css/common.css',gulp.series('commonCssCopyToDist'));
     gulp.watch('./js/*.js',gulp.series('concatJs'));
+
+    gulp.watch('./js/*.js',gulp.series('c_card'));
+
     gulp.watch('./*.html',gulp.series('minifyHtml'));
     gulp.watch('./img/*.*',gulp.series('imagemin'));
     gulp.watch('./icon/*.*',gulp.series('iconCopyToDist'));
@@ -104,7 +115,7 @@ gulp.task('start',gulp.series('reload','watchs'));
 gulp.task('build',gulp.parallel(// 打包
     gulp.series('animateCssCopyToDist'),
     gulp.series('swiperCssCopyToDist', 'swiperJsCopyToDist'),
-    gulp.series('jqueryJsCopyToDist','iconCopyToDist','dataCopyToDist'),
+    gulp.series('jqueryJsCopyToDist','iconCopyToDist','dataCopyToDist','c_card'),
     gulp.series('commonCssCopyToDist'),
     gulp.series('sass','concatCss'),
     gulp.series('concatJs'),  //,'uglifyJq'

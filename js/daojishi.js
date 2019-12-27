@@ -7,13 +7,20 @@ setInterval(function (){
     var d2 = new Date();//当前时间
 
     var time1 = d1.getTime();//1970到2020/1/1的毫秒数
+    // console.log(time1);
+    
     var time2 = d2.getTime();//1970到当前的毫秒数
+    // console.log(time2 );
+    
     var times = time1 - time2;//当前到2020.1.1的毫秒数
-
-    // var days = parseInt( times / (1000*60*60*24) );//剩余天数
-
-    var hours = 23 - d2.getHours();
-
+   
+    
+    var days = parseInt( times / (1000*60*60*24) );//剩余天数
+ 
+ 
+    var hours = 16 - d2.getHours();
+   
+   
     var minutes = 59 - d2.getMinutes();
 
     var seconds = 59 - d2.getSeconds();

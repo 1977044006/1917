@@ -156,6 +156,8 @@ function loadData(){
                               $('.c_nav_cen ul li').eq(index).css('backgroundColor','greenyellow');
                               fn();
                         }
+
+                        
                   }
 
                   c_fn4a();
@@ -194,9 +196,8 @@ function loadData(){
                                     //            c_move1();
                                     //      },1000)
                                     // }
-                                    if (x>img1w*3) {
+                                    if (x>=img1w*2) {
                                           x = 0;
-                                        
                                          c_row1_right.scrollLeft=0;
                                     }
                                     else{
@@ -213,7 +214,7 @@ function loadData(){
                                     });
                                     $('.c_controls1_b').click(function(){
                                           clearInterval(timer);
-                                          if(x>3*img1w){
+                                          if(x>2*img1w){
                                                 c_row1_right.scrollLeft=0;
                                           }else{
                                                 c_row1_right.scrollLeft=x+img1w;
@@ -234,9 +235,6 @@ function loadData(){
                   c_fn5();
                  
                   
-
-
-
                   function c_fn7(){
                         var c_arr7=jsonArr.json7;
                         var c_results7='';
@@ -580,7 +578,8 @@ function loadData(){
                         });
                         $('.c_ul7').html(c_results22);
                         
-                        
+                        var  c_spana=$('.c_spana');
+                        var  c_ema=$('.c_ema');
                         function addGoods(){
                               // 点击加入购物车
                               $('.c_ul7').on('click','li a h5',function (){
@@ -590,11 +589,24 @@ function loadData(){
                                   var code = $(this).parent().parent().parent().attr('code');// 'abc2'
                           
                                   // 判断当前本地存储是否有加入购物车的商品 ['abc3','abc4']
-                                  if (localStorage.getItem('goods')) {
-                                      var codeArr = JSON.parse(localStorage.getItem('goods')).code;
-                                  } else {
-                                      var codeArr = [];
-                                  }
+                                    if (localStorage.getItem('goods')) {
+                                          var codeArr = JSON.parse(localStorage.getItem('goods')).code;
+                                          (function(){
+                                                var codeArr = JSON.parse(localStorage.getItem('goods')).code;
+                                                var jsonStr = JSON.stringify({"code":codeArr});
+                                                var  c_spana=$('.c_spana');
+                                                var  c_ema=$('.c_ema');
+                                                var jsonStr1=JSON.parse(jsonStr)
+                                                //    console.log(jsonStr1.code);
+                                                    var c_index=jsonStr1.code.length;
+                                                //     console.log(c_index); 
+                                                c_spana.text(c_index+1);
+                                                c_ema.text(c_index+1);
+                                          })();
+                                    } else {
+                                          var codeArr = [];
+                                    
+                                    }
                           
                                   // 把点击商品的编号放到商品编号数组中
                                   codeArr.push(code);
@@ -610,18 +622,7 @@ function loadData(){
                         }
  
                         addGoods();
-                        (function(){
-                              var codeArr = JSON.parse(localStorage.getItem('goods')).code;
-                              var jsonStr = JSON.stringify({"code":codeArr});
-                              var  c_spana=$('.c_spana');
-                              var  c_ema=$('.c_ema')
-                              var jsonStr1=JSON.parse(jsonStr)
-                              //    console.log(jsonStr1.code);
-                                  var c_index=jsonStr1.code.length;
-                              //     console.log(c_index);
-                                  c_spana.text(` (${c_index})`);
-                                  c_ema.text(c_index);
-                        })();
+                       
                   }
                   c_fn22();
 
@@ -630,11 +631,6 @@ function loadData(){
       
 }
 loadData();
-
-
-
-
-
 
 
 function c_fn2(){
@@ -651,14 +647,18 @@ c_fn2();
 function c_fn1(){
       $('.c_topbar_cart').mouseenter(function(){
             $('.c_topbar_cart a').css('background','white')
+            //$('.c_topbar_cart a').stop().slideUp( 5000 , 'swing' , function (){ } )
             $('.c_cart').css('display','block')
       })
       $('.c_topbar_cart').mouseleave(function(){
             $('.c_cart').css('display','none')
+            //$('.c_cart a').stop().slideUp( 5000 , 'swing' , function (){ } )
             $('.c_topbar_cart a').css('background','')
       })
 }
 c_fn1();
 
-
+// $('.c_header_nav').on('mouseleave','.c_ula',function(){
+//       $('.c_nav_menu').stop().slideUp( 200 , 'swing' , function (){ } );
+// })
 
