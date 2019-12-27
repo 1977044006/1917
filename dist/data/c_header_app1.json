@@ -1,0 +1,124 @@
+
+
+
+{
+	"json1":[
+		{"title":"Redmi K30","imgurl":"./img/redmi/c_redmi1.webp","price":"1599"},
+		{"title":"Redmi K30 5G","imgurl":"./img/redmi/c_redmi2.webp","price":"1999"},
+		{"title":"Redmi 8A","imgurl":"./img/redmi/c_redmi3.webp","price":"699"},
+		{"title":"Redmi Note 8","imgurl":"./img/redmi/c_redmi4.webp","price":"999"},
+		{"title":"Redmi K20 Pro","imgurl":"./img/redmi/c_redmi5.webp","price":"2399"},
+		{"title":"Redmi Note 8 Pro","imgurl":"./img/redmi/c_redmi6.webp","price":"1199"}
+	],
+	"json2":[
+		{"imgurl":"./img/header_luboto/c_luobo1.jpg"},
+		{"imgurl":"./img/header_luboto/c_lunbo2.webp"},
+		{"imgurl":"./img/header_luboto/c_lunbo3.webp"},
+		{"imgurl":"./img/header_luboto/c_luobo4.webp"},
+		{"imgurl":"./img/header_luboto/c_lunbo5.webp"}
+	],
+	"json3":[
+		{"title":"小米米家智能摄像机1","imgurl":"./img/c_shangou/c_shangou1.jpg","price":"1599"},
+		{"title":"小米米家智能摄像机2","imgurl":"./img/c_shangou/c_shangou2.jpg","price":"1999"},
+		{"title":"小米米家智能摄像机3","imgurl":"./img/c_shangou/c_shangou3.jpg","price":"699"},
+		{"title":"小米米家智能摄像机4","imgurl":"./img/c_shangou/c_shangou4.jpg","price":"999"},
+		{"title":"小米米家智能摄像机5","imgurl":"./img/c_shangou/c_shangou5.jpg","price":"2399"},
+		{"title":"小米米家智能摄像机6","imgurl":"./img/c_shangou/c_shangou6.jpg","price":"1199"},
+		{"title":"小米米家智能摄像机7","imgurl":"./img/c_shangou/c_shangou7.jpg","price":"1199"},
+		{"title":"小米米家智能摄像机8","imgurl":"./img/c_shangou/c_shangou8.jpg","price":"1199"},
+		{"title":"小米米家智能摄像机9","imgurl":"./img/c_shangou/c_shangou9.jpg","price":"1199"},
+		{"title":"小米米家智能摄像机10","imgurl":"./img/c_shangou/c_shangou10.jpg","price":"1199"},
+		{"title":"小米米家智能摄像机11","imgurl":"./img/c_shangou/c_shangou11.jpg","price":"1199"},
+		{"title":"小米米家智能摄像机12","imgurl":"./img/c_shangou/c_shangou12.jpg","price":"1199"}
+	],
+	"json7":[
+		{"imgurl":"./img/lun/c_lun1.jpg"},
+		{"imgurl":"./img/lun/c_lun2.jpg"},
+		{"imgurl":"./img/lun/c_lun3.jpg"}
+	],
+	"json8":[
+		{"title":"Redmi K30","imgurl":"./img/shouji/c_shouji1.webp"},
+		{"title":"Redmi K30","imgurl":"./img/shouji/c_shouji2.webp"},
+		{"title":"Redmi K30","imgurl":"./img/shouji/c_shouji3.png"},
+		{"title":"Redmi K30","imgurl":"./img/shouji/c_shouji4.png"},
+		{"title":"Redmi K30","imgurl":"./img/shouji/c_shouji5.webp"},
+		{"title":"Redmi K30","imgurl":"./img/shouji/c_shouji6.webp"},
+		{"title":"Redmi K30","imgurl":"./img/shouji/c_shouji7.webp"},
+		{"title":"Redmi K30","imgurl":"./img/shouji/c_shouji8.jpg"}
+	],
+	"json9":[
+		{"title":"小米电视","imgurl":"./img/dianshi/c_dainshi1.webp"},
+		{"title":"小米电视","imgurl":"./img/dianshi/c_dianshi2.webp"},
+		{"title":"小米电视","imgurl":"./img/dianshi/c_dianshi3.webp.png"},
+		{"title":"小米电视","imgurl":"./img/dianshi/c_dainshi4.webp.png"},
+		{"title":"小米电视","imgurl":"./img/dianshi/c_dainshi5.webp"},
+		{"title":"小米电视","imgurl":"./img/dianshi/c_dianshi6.webp"},
+		{"title":"小米电视","imgurl":"./img/dianshi/c_dianshi7.webp.jpg"},
+		{"title":"小米电视","imgurl":"./img/dianshi/c_dianshi8.webp.jpg"}
+	],
+	"json10":[
+		{"title":"小米笔记本","imgurl":"./img/bijiben/bijjiben1.webp"},
+		{"title":"小米笔记本","imgurl":"./img/bijiben/bijiben2.webp"},
+		{"title":"小米笔记本","imgurl":"./img/bijiben/bijiben3.webp.png"},
+		{"title":"小米笔记本","imgurl":"./img/bijiben/bijiben4.webp.jpg"},
+		{"title":"小米笔记本","imgurl":"./img/bijiben/bijiben5.jpg"},
+		{"title":"小米笔记本","imgurl":"./img/bijiben/bijiben6.webp"},
+		{"title":"小米笔记本","imgurl":"./img/bijiben/bijiben7.webp"}
+	],
+	"json11":[
+		{"title":"Redmi k30 5g","imgurl":"./img/chakanquanbu/c_cha1.webp","price":"1499"},
+		{"title":"Redmi k30 5g","imgurl":"./img/chakanquanbu/c_cha2.webp","price":"1599"},
+		{"title":"Redmi k30 5g","imgurl":"./img/chakanquanbu/c_cha3.webp","price":"1799"},
+		{"title":"Redmi k30 5g","imgurl":"./img/chakanquanbu/c_cha4.webp","price":"1899"},
+		{"title":"Redmi k30 5g","imgurl":"./img/chakanquanbu/c_cha5.webp","price":"1999"},
+		{"title":"Redmi k30 5g","imgurl":"./img/chakanquanbu/c_cha6.webp","price":"2099"},
+		{"title":"Redmi k30 5g","imgurl":"./img/chakanquanbu/c_cha7.webp","price":"2199"},
+		{"title":"Redmi k30 5g","imgurl":"./img/chakanquanbu/c_cha8.webp","price":"2299"}
+	],
+	"json12":[
+		{"title":"小米[小爱老师]1","imgurl":"./img/remen/c_remen1.webp","price":"1499"},
+		{"title":"小米[小爱老师]2","imgurl":"./img/remen/c_remen2.webp","price":"1399"},
+		{"title":"小米[小爱老师]3","imgurl":"./img/remen/c-remen3.webp","price":"1699"},
+		{"title":"小米[小爱老师]4","imgurl":"./img/remen/c_remen4.webp","price":"499"},
+		{"title":"小米[小爱老师]5","imgurl":"./img/remen/c_renmen5.webp","price":"6499"},
+		{"title":"小米[小爱老师]6","imgurl":"./img/remen/c_renmen6.webp","price":"899"},
+		{"title":"小米[小爱老师]7","imgurl":"./img/remen/c_renmen7.webp","price":"199"}	
+	],
+	"json13":[
+		{"title":"米家智能门锁","imgurl":"./img/anfang/c_an1.webp","price":"1299"},
+		{"title":"米家智能门锁","imgurl":"./img/anfang/c_an2.webp","price":"199"},
+		{"title":"米家智能门锁","imgurl":"./img/anfang/c_an3.webp","price":"299"},
+		{"title":"米家智能门锁","imgurl":"./img/anfang/c_an4.webp","price":"1699"},
+		{"title":"米家智能门锁","imgurl":"./img/anfang/c_an5.webp","price":"1399"},
+		{"title":"米家智能门锁","imgurl":"./img/anfang/c_an6.webp","price":"1899"},
+		{"title":"米家智能门锁","imgurl":"./img/anfang/c_an7.jpg","price":"799"}	
+	],
+	"json14":[
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu1.jpg","price":"1299"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu2.jpg","price":"1299"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu3.jpg","price":"1299"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu4.png","price":"1299"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu5.jpg","price":"1299"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu6.webp","price":"1299"}
+	],
+
+	"json15":[
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian1.webp","price":"1299"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_tian2.jpg","price":"1199"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian3.webp","price":"1299"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian4.png","price":"1299"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian5.jpg","price":"1299"},
+		{"title":"红米电视","imgurl":"./img/toubu dianshi/c_h_dian6.jpg","price":"1299"}
+	],
+
+	"json16":[
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu1.jpg","price":"199","code":"abc1"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu2.jpg","price":"1299","code":"abc2"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu3.jpg","price":"699","code":"abc3"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu4.png","price":"1599","code":"abc4"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu5.jpg","price":"1099","code":"abc5"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu6.webp","price":"2399","code":"abc6"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu3.jpg","price":"1799","code":"abc7"},
+		{"title":"米兔遥控小飞机","imgurl":"./img/chuxing/c_chu5.jpg","price":"1399","code":"abc8"}
+	]
+}
